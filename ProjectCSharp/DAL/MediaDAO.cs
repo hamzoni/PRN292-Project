@@ -24,7 +24,7 @@ namespace ProjectCSharp.DAL
 
         public void delete(object x)
         {
-            QueryBuilder.table("Media")
+            QueryBuilder.table(table)
                 .delete()
                 .where("id", x);
         }

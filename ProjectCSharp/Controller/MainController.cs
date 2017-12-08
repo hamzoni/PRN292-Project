@@ -54,8 +54,6 @@ namespace ProjectCSharp.Controller
 
             // listing video
             loadVideoList();
-
-            
         }
 
         public void downloadVideo(string url)
@@ -154,3 +152,4 @@ namespace ProjectCSharp.Controller
         }
     }
 }
+     

@@ -12,6 +12,26 @@ namespace ProjectCSharp.DAL
     {
         private string table = "PlayList";
 
+        public List<Playlist> searchByAccount(int accountID)
+        {
+            List<Playlist> lists = new List<Playlist>();
+            DataRowCollection rows = (DataRowCollection)QueryBuilder.table(table)
+                .select()
+                .where("account_id", accountID)
+                .execute();
+
+            foreach (DataRow row in rows)
+            {
+                Playlist playlist = new Playlist();
+                playlist.id = (int)row["id"]; ;
+                playlist.name = (string)row["name"];
+                playlist.medias = DataModel.medMdl.searchByPlaylist(playlist.id);
+                playlist.count = count(playlist.id);
+                break;
+            }
+            return lists;
+        }
+
         public Playlist search(int playlistID, int accountID)
         {
             Playlist playlist = null;
@@ -54,16 +74,23 @@ namespace ProjectCSharp.DAL
         public void delete(object x)
         {
             // delete in n-n table first
-            QueryBuilder.table("PlayList_Media")
-                .delete()
-                .where("playlist_id", x)
-                .execute();
+            DataModel.plmedMdl.deleteByPlaylist((int)x);
 
             // delete in official table
             QueryBuilder.table(table)
                 .delete()
                 .where("id", x)
                 .execute();
+        }
+
+        public void deleteByAccount(int accountID)
+        {
+            // delete all playlist with account id = accountID
+            List<Playlist> lists = searchByAccount(accountID);
+            foreach (Playlist pl in lists)
+            {
+                delete(pl.id);
+            }
         }
 
         public bool insert(Playlist playlist, int userId)
@@ -80,7 +107,7 @@ namespace ProjectCSharp.DAL
             dict.Add("name", playlist.name);
             dict.Add("account_id", playlist.user.id);
 
-            int playlistID = (int)QueryBuilder.table("PlayList")
+            int playlistID = (int)QueryBuilder.table(table)
                 .insertGetID(dict);
 
             // add medias

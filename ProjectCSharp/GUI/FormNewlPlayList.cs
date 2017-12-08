@@ -18,6 +18,7 @@ namespace ProjectCSharp
         PlaylistMedia playlistMedia;
         List<Media> list;
         DataTable dt;
+
         public FormNewlPlayList()
         {
             InitializeComponent();
