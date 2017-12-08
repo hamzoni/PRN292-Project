@@ -13,12 +13,11 @@ using System.IO;
 
 namespace ProjectCSharp
 {
-    public partial class FormPlayList : Form
-    {
-        
-        string connection = ConfigurationManager.ConnectionStrings["DBI"].ToString();
-        SqlConnection con;
+     partial class FormPlayList : Form
+        {
+
         List<Playlist> list;
+        public Playlist playlist;
         public FormPlayList()
         {
             InitializeComponent();
@@ -26,6 +25,7 @@ namespace ProjectCSharp
             test(ref list);
             loadToDataGridView();
         }
+
 
         private void test(ref List<Playlist> list)
         {
@@ -91,9 +91,19 @@ namespace ProjectCSharp
             if (dataGridView1.RowCount == 0) return;
             if (index>=0)
             {
+                
                 DataGridViewRow selectedRow = dataGridView1.Rows[index];
                 string playlistName = selectedRow.Cells[1].Value.ToString();
-                FormDetailPlaylist dpl = new FormDetailPlaylist(playlistName);
+                foreach (Playlist pl in list)
+                {
+                    if (pl.name == playlistName)
+                    {
+                        playlist = pl;
+                        break;
+                    }
+                }
+                //ko hieu sao ko truyen vao 1 playlist dc nen phai truyen vao ca class =(((
+                FormDetailPlaylist dpl = new FormDetailPlaylist(playlist);
                 dpl.ShowDialog();
             }
             

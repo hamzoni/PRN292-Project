@@ -12,25 +12,27 @@ using ProjectCSharp.Entities;
 
 namespace ProjectCSharp
 {
-    public partial class FormDetailPlaylist : Form
+    partial class FormDetailPlaylist : Form
     {
-        string _playlistName = "";
+        
         SqlConnection con;
         string connection = ConfigurationManager.ConnectionStrings["DBI"].ToString();
 
-        List<Media> listMedia;
+        Playlist playlist;
+        
+
         public FormDetailPlaylist()
         {
             InitializeComponent();
         }
 
-        public FormDetailPlaylist(string playlistName)
+        public FormDetailPlaylist(Playlist xPlaylist)
         {
             InitializeComponent();
-            lblNameOfPlaylist.Text = playlistName;
-            _playlistName = playlistName;
-            listMedia = new List<Media>();
+            this.playlist = xPlaylist;
+            lblNameOfPlaylist.Text = playlist.name;
             loadToDataGridView();
+            
         }
 
 
@@ -39,6 +41,9 @@ namespace ProjectCSharp
         Point lastPoint;
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
+            
+            loadToDataGridView();
+
             lastPoint = new Point(-e.X, -e.Y);
         }
 
@@ -80,11 +85,13 @@ namespace ProjectCSharp
             dt.Columns.Add("Name");
             dt.Columns.Add("URL");
             dt.Columns.Add("Type");
-            foreach (Media media in listMedia)
+            if (playlist.medias != null)
             {
-                dt.Rows.Add(new object[] { media.id, media.name, media.url, media.type });
+                foreach (Media media in playlist.medias)
+                {
+                    dt.Rows.Add(new object[] { media.id, media.name, media.url, media.type });
+                }
             }
-
 
             dataGridView1.DataSource = dt;
         }

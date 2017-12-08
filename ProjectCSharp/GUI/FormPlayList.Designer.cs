@@ -34,8 +34,9 @@
             this.btnViewDetail = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnNewPlaylist = new System.Windows.Forms.Label();
-            this.btnSavePlaylist = new System.Windows.Forms.Label();
+            this.btnEdit = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDelete = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -46,9 +47,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Black;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Right;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(479, 0);
+            this.label2.Location = new System.Drawing.Point(362, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(21, 23);
@@ -75,10 +77,10 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 385);
+            this.panel2.Location = new System.Drawing.Point(0, 425);
             this.panel2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(501, 4);
+            this.panel2.Size = new System.Drawing.Size(383, 4);
             this.panel2.TabIndex = 1;
             // 
             // btnViewDetail
@@ -86,12 +88,12 @@
             this.btnViewDetail.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnViewDetail.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewDetail.ForeColor = System.Drawing.Color.Black;
-            this.btnViewDetail.Location = new System.Drawing.Point(401, 126);
+            this.btnViewDetail.Location = new System.Drawing.Point(281, 382);
             this.btnViewDetail.Margin = new System.Windows.Forms.Padding(2);
             this.btnViewDetail.Name = "btnViewDetail";
             this.btnViewDetail.Size = new System.Drawing.Size(90, 28);
             this.btnViewDetail.TabIndex = 7;
-            this.btnViewDetail.Text = "View Detail";
+            this.btnViewDetail.Text = "Detail";
             this.btnViewDetail.UseVisualStyleBackColor = false;
             this.btnViewDetail.Click += new System.EventHandler(this.btnViewDetail_Click);
             // 
@@ -119,18 +121,18 @@
             this.btnNewPlaylist.Text = "New";
             this.btnNewPlaylist.Click += new System.EventHandler(this.btnNewPlaylist_Click);
             // 
-            // btnSavePlaylist
+            // btnEdit
             // 
-            this.btnSavePlaylist.AutoSize = true;
-            this.btnSavePlaylist.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.btnSavePlaylist.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSavePlaylist.ForeColor = System.Drawing.Color.White;
-            this.btnSavePlaylist.Location = new System.Drawing.Point(67, 81);
-            this.btnSavePlaylist.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.btnSavePlaylist.Name = "btnSavePlaylist";
-            this.btnSavePlaylist.Size = new System.Drawing.Size(58, 25);
-            this.btnSavePlaylist.TabIndex = 12;
-            this.btnSavePlaylist.Text = "Save";
+            this.btnEdit.AutoSize = true;
+            this.btnEdit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnEdit.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(67, 81);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(46, 25);
+            this.btnEdit.TabIndex = 12;
+            this.btnEdit.Text = "Edit";
             // 
             // panel1
             // 
@@ -140,8 +142,21 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(501, 27);
+            this.panel1.Size = new System.Drawing.Size(383, 27);
             this.panel1.TabIndex = 13;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.AutoSize = true;
+            this.btnDelete.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(117, 81);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(72, 25);
+            this.btnDelete.TabIndex = 14;
+            this.btnDelete.Text = "Delete";
             // 
             // pictureBox1
             // 
@@ -149,7 +164,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(501, 27);
+            this.pictureBox1.Size = new System.Drawing.Size(383, 27);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -161,9 +176,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
-            this.ClientSize = new System.Drawing.Size(501, 389);
+            this.ClientSize = new System.Drawing.Size(383, 429);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnSavePlaylist);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnNewPlaylist);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnViewDetail);
@@ -191,7 +207,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label btnNewPlaylist;
-        private System.Windows.Forms.Label btnSavePlaylist;
+        private System.Windows.Forms.Label btnEdit;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label btnDelete;
     }
 }

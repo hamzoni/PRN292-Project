@@ -20,9 +20,10 @@ namespace ProjectCSharp.Database
 
         private const int SELECT = 0;
         private const int INSERT = 1;
-        private const int UPDATE = 2;
-        private const int DELETE = 3;
-        private const int COUNT = 4;
+        private const int INSERT_GETID = 2;
+        private const int UPDATE = 3;
+        private const int DELETE = 4;
+        private const int COUNT = 5;
 
         public const int AND = 0;
         public const int OR = 1;
@@ -183,6 +184,40 @@ namespace ProjectCSharp.Database
             }
 
             return this;
+        }
+
+        public int insert(Dictionary<string, object> entries, bool getId)
+        {
+            type = QueryBuilder.INSERT_GETID;
+            setup();
+
+            pr = new List<SqlParameter>();
+
+            query = "INSERT INTO " + tbn + "(";
+
+            // define fields
+            string ql = "";
+            string qr = "";
+            foreach (KeyValuePair<string, object> entry in entries)
+            {
+                ql += entry.Key + ",";
+                qr += "@" + entry.Key + ",";
+                pr.Add(new SqlParameter("@" + entry.Key, entry.Value));
+            }
+            query += ql.TrimEnd(',') + ") " +
+                " OUTPUT INSERTED.ID " +
+                " VALUES(" + qr.TrimEnd(',') + ")";
+
+            // define parameters
+            cmd.Connection = con;
+            cmd.CommandText = query;
+
+            foreach (SqlParameter p in pr)
+            {
+                cmd.Parameters.Add(p);
+            }
+
+            return (Int32)cmd.ExecuteScalar();
         }
 
         public QueryBuilder insert(Dictionary<string, object> entries)
