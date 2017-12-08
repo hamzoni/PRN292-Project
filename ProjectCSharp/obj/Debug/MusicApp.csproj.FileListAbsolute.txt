@@ -134,3 +134,4 @@ C:\Users\World\Downloads\project C#\ProjectCSharp\ProjectCSharp\bin\Debug\policy
 C:\Users\World\Downloads\project C#\ProjectCSharp\ProjectCSharp\bin\Debug\taglib-sharp.dll
 C:\Users\World\Downloads\project C#\ProjectCSharp\ProjectCSharp\bin\Debug\policy.2.0.taglib-sharp.config
 >>>>>>> b91d6cf4d29d99238028bf687596afc346fe2ed2
+C:\Users\Mortos\Desktop\project C#\ProjectCSharp\PRN292-Projects\ProjectCSharp\obj\Debug\ProjectCSharp.GUI.FormEditPlaylist.resources

@@ -57,10 +57,7 @@
     </Reference>
     <Reference Include="policy.2.0.taglib-sharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=db62eba44689b5b0, processorArchitecture=MSIL">
       <HintPath>..\packages\taglib.2.1.0.0\lib\policy.2.0.taglib-sharp.dll</HintPath>
-<<<<<<< HEAD
       <Private>True</Private>
-=======
->>>>>>> b91d6cf4d29d99238028bf687596afc346fe2ed2
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -74,10 +71,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="taglib-sharp, Version=2.1.0.0, Culture=neutral, PublicKeyToken=db62eba44689b5b0, processorArchitecture=MSIL">
       <HintPath>..\packages\taglib.2.1.0.0\lib\taglib-sharp.dll</HintPath>
-<<<<<<< HEAD
       <Private>True</Private>
-=======
->>>>>>> b91d6cf4d29d99238028bf687596afc346fe2ed2
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -90,7 +84,6 @@
     </Compile>
     <Compile Include="DAL\MediaDAO.cs" />
     <Compile Include="DAL\PlayListDAO.cs" />
-    <Compile Include="DAL\PlaylistMediaDAO.cs" />
     <Compile Include="Database\QueryBuilder.cs" />
     <Compile Include="Entities\Media.cs" />
     <Compile Include="Entities\Playlist.cs" />
@@ -107,6 +100,12 @@
     </Compile>
     <Compile Include="GUI\FormDownloadProgress.Designer.cs">
       <DependentUpon>FormDownloadProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormEditPlaylist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormEditPlaylist.Designer.cs">
+      <DependentUpon>FormEditPlaylist.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FormNewlPlayList.cs">
       <SubType>Form</SubType>
@@ -156,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormDownloadProgress.resx">
       <DependentUpon>FormDownloadProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormEditPlaylist.resx">
+      <DependentUpon>FormEditPlaylist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>

@@ -134,5 +134,10 @@ namespace ProjectCSharp
 
             dataGridView1.DataSource = dt;
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
