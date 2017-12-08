@@ -82,3 +82,6 @@ C:\Users\Mortos\Desktop\project C#\ProjectCSharp\PRN292-Projects\ProjectCSharp\o
 C:\Users\Mortos\Desktop\project C#\ProjectCSharp\PRN292-Projects\ProjectCSharp\obj\Debug\ProjectCSharp.FormDetailPlaylist.resources
 C:\Users\Mortos\Desktop\project C#\ProjectCSharp\PRN292-Projects\ProjectCSharp\obj\Debug\ProjectCSharp.FormNewlPlayList.resources
 C:\Users\Mortos\Desktop\project C#\ProjectCSharp\PRN292-Projects\ProjectCSharp\obj\Debug\ProjectCSharp.FormPlayList.resources
+C:\Users\Mortos\Desktop\project C#\ProjectCSharp\PRN292-Projects\ProjectCSharp\bin\Debug\policy.2.0.taglib-sharp.dll
+C:\Users\Mortos\Desktop\project C#\ProjectCSharp\PRN292-Projects\ProjectCSharp\bin\Debug\taglib-sharp.dll
+C:\Users\Mortos\Desktop\project C#\ProjectCSharp\PRN292-Projects\ProjectCSharp\bin\Debug\policy.2.0.taglib-sharp.config

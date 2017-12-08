@@ -92,29 +92,30 @@ namespace ProjectCSharp
                 dt.Columns.Add("Name");
                 dt.Columns.Add("URL");
                 dt.Columns.Add("Type of File");
-                
-                
-                
-                //for (int i = 0; i < openFileDialog1.FileNames.Length; i++)
-                //{
-                //    TagLib.File tagFile = TagLib.File.Create(openFileDialog1.FileNames[i]);
-                //    string title = tagFile.Tag.Title;
-                //    string url = openFileDialog1.FileNames[i].ToString();
-                    
-                //    if (checkExistMedia(title,url) == false)
-                //    {
-                //        Media media = new Media();
-                //        media.name = title;
-                //        media.url = url;
-                //        media.type = true; //tam thoi the da
-                //        list.Add(media);
 
-                //    }else
-                //    {
-                //        MessageBox.Show("This media already exist is your playlist", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                //    }
-                    
-                //}
+
+
+                for (int i = 0; i < openFileDialog1.FileNames.Length; i++)
+                {
+                    TagLib.File tagFile = TagLib.File.Create(openFileDialog1.FileNames[i]);
+                    string title = tagFile.Tag.Title;
+                    string url = openFileDialog1.FileNames[i].ToString();
+
+                    if (checkExistMedia(title, url) == false)
+                    {
+                        Media media = new Media();
+                        media.name = title;
+                        media.url = url;
+                        media.type = true; //tam thoi the da
+                        list.Add(media);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("This media already exist is your playlist", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+
+                }
                 for (int i = 0; i < list.Count; i++)
                 {
                     dt.Rows.Add(new object[] { list[i].name, list[i].url, list[i].type });
