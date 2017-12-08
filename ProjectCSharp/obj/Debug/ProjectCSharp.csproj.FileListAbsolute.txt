@@ -1,0 +1,16 @@
+C:\Users\Mortos\Desktop\project C#\ProjectCSharp\ProjectCSharp\bin\Debug\ProjectCSharp.exe
+C:\Users\Mortos\Desktop\project C#\ProjectCSharp\ProjectCSharp\bin\Debug\ProjectCSharp.pdb
+C:\Users\Mortos\Desktop\project C#\ProjectCSharp\ProjectCSharp\obj\Debug\ProjectCSharp.csprojResolveAssemblyReference.cache
+C:\Users\Mortos\Desktop\project C#\ProjectCSharp\ProjectCSharp\obj\Debug\ProjectCSharp.Properties.Resources.resources
+C:\Users\Mortos\Desktop\project C#\ProjectCSharp\ProjectCSharp\obj\Debug\ProjectCSharp.csproj.GenerateResource.Cache
+C:\Users\Mortos\Desktop\project C#\ProjectCSharp\ProjectCSharp\obj\Debug\ProjectCSharp.exe
+C:\Users\Mortos\Desktop\project C#\ProjectCSharp\ProjectCSharp\obj\Debug\ProjectCSharp.pdb
+C:\Users\Mortos\Desktop\project C#\ProjectCSharp\ProjectCSharp\obj\Debug\ProjectCSharp.Login.resources
+C:\Users\Mortos\Desktop\project C#\ProjectCSharp\ProjectCSharp\obj\Debug\ProjectCSharp.Register.resources
+C:\Users\Mortos\Desktop\project C#\ProjectCSharp\ProjectCSharp\obj\Debug\Interop.WMPLib.dll
+C:\Users\Mortos\Desktop\project C#\ProjectCSharp\ProjectCSharp\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Mortos\Desktop\project C#\ProjectCSharp\ProjectCSharp\obj\Debug\ProjectCSharp.csproj.ResolveComReference.cache
+C:\Users\Mortos\Desktop\project C#\ProjectCSharp\ProjectCSharp\bin\Debug\Interop.WMPLib.dll
+C:\Users\Mortos\Desktop\project C#\ProjectCSharp\ProjectCSharp\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Mortos\Desktop\project C#\ProjectCSharp\ProjectCSharp\obj\Debug\ProjectCSharp.Main.resources
+C:\Users\Mortos\Desktop\project C#\ProjectCSharp\ProjectCSharp\bin\Debug\ProjectCSharp.exe.config
