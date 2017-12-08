@@ -11,6 +11,14 @@ namespace ProjectCSharp.DAL
 {
     class AccountDAO : DAO, IDAO<Account>
     {
+        public int count(int id)
+        {
+            int count = (int)QueryBuilder.table("Account")
+                .count()
+                .where("id", id)
+                .execute();
+            return count;
+        }
 
         public int count(string username)
         {

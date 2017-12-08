@@ -10,11 +10,16 @@ namespace ProjectCSharp.DAL
 {
     class MediaDAO : DAO, IDAO<Media>
     {
+        private string table = "Media";
 
         public int count(int playlist_id)
         {
-
-            return -1;
+            int c = (int) QueryBuilder.table(table)
+               .count()
+               .join("PlayList_Media", "id", "media_id")
+               .where("playlist_id", playlist_id)
+               .execute();
+            return c;
         }
 
         public void delete(object x)
@@ -24,27 +29,39 @@ namespace ProjectCSharp.DAL
                 .where("id", x);
         }
 
-        public bool insert(Media x)
+        public int insertGetId(Media x)
         {
-            Dictionary<string, object> dict = new Dictionary<string, object>();
+            var dict = QueryBuilder.getDictionary();
             dict.Add("name", x.name);
             dict.Add("url", x.url);
             dict.Add("type", x.type);
 
-            int c = (int) QueryBuilder.table("Media")
+            return QueryBuilder.table(table)
+                .insertGetID(dict);
+        }
+
+        public bool insert(Media x)
+        {
+            var dict = QueryBuilder.getDictionary();
+            dict.Add("name", x.name);
+            dict.Add("url", x.url);
+            dict.Add("type", x.type);
+
+            int c = (int) QueryBuilder.table(table)
                 .insert(dict)
                 .execute();
 
             return c != 0;
         }
 
-        public List<Media> searchByPlaylist(string listname)
+        public List<Media> searchByPlaylist(int playlistID)
         {
             List<Media> items = new List<Media>();
 
-            DataRowCollection rows = (DataRowCollection)QueryBuilder.table("Account")
+            DataRowCollection rows = (DataRowCollection)QueryBuilder.table(table)
                 .select()
-                .where("name", QueryBuilder.AND, listname)
+                .join("PlayList_Media", "id", "media_id")
+                .where("playlist_id", playlistID)
                 .execute();
 
             foreach (DataRow row in rows)
@@ -83,7 +100,7 @@ namespace ProjectCSharp.DAL
             Dictionary<string, object> pairs = new Dictionary<string, object>();
             pairs.Add("name", x.name);
 
-            QueryBuilder.table("Media")
+            QueryBuilder.table(table)
                 .update(pairs)
                 .where("id", x.id)
                 .execute();
