@@ -16,7 +16,7 @@ namespace ProjectCSharp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPlayList());
+            Application.Run(new FormMain());
         }
     }
 }

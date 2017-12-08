@@ -7,7 +7,7 @@ namespace ProjectCSharp.Entities
 {
     class PlaylistMedia
     {
-        public Account account { get; set; }
+        public Media media { get; set; }
         public Playlist playlist { get; set; }
     }
 }

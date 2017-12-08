@@ -43,6 +43,7 @@
             this.main_panel = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label_playlist = new System.Windows.Forms.Label();
             this.television = new AxWMPLib.AxWindowsMediaPlayer();
             this.list_videos = new System.Windows.Forms.ListBox();
             this.btn_choosePlayFolder = new System.Windows.Forms.Button();
@@ -65,7 +66,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label_playlist = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelSlide.SuspendLayout();
@@ -288,6 +288,15 @@
             this.panel2.Size = new System.Drawing.Size(935, 619);
             this.panel2.TabIndex = 1;
             // 
+            // label_playlist
+            // 
+            this.label_playlist.AutoSize = true;
+            this.label_playlist.Location = new System.Drawing.Point(4, 10);
+            this.label_playlist.Name = "label_playlist";
+            this.label_playlist.Size = new System.Drawing.Size(14, 13);
+            this.label_playlist.TabIndex = 24;
+            this.label_playlist.Text = "#";
+            // 
             // television
             // 
             this.television.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
@@ -494,15 +503,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(469, 20);
             this.textBox2.TabIndex = 14;
-            // 
-            // label_playlist
-            // 
-            this.label_playlist.AutoSize = true;
-            this.label_playlist.Location = new System.Drawing.Point(4, 10);
-            this.label_playlist.Name = "label_playlist";
-            this.label_playlist.Size = new System.Drawing.Size(14, 13);
-            this.label_playlist.TabIndex = 24;
-            this.label_playlist.Text = "#";
             // 
             // FormMain
             // 

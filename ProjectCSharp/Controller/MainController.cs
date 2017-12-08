@@ -1,4 +1,5 @@
-﻿using ProjectCSharp.Database;
+﻿using ProjectCSharp.DAL;
+using ProjectCSharp.Database;
 using ProjectCSharp.GUI;
 using ProjectCSharp.GUIDynamic;
 using ProjectCSharp.Utility;
@@ -53,8 +54,6 @@ namespace ProjectCSharp.Controller
 
             // listing video
             loadVideoList();
-
-            
         }
 
         public void downloadVideo(string url)
@@ -153,3 +152,4 @@ namespace ProjectCSharp.Controller
         }
     }
 }
+     

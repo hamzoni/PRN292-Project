@@ -186,7 +186,7 @@ namespace ProjectCSharp.Database
             return this;
         }
 
-        public int insert(Dictionary<string, object> entries, bool getId)
+        public int insertGetID(Dictionary<string, object> entries)
         {
             type = QueryBuilder.INSERT_GETID;
             setup();
@@ -200,6 +200,7 @@ namespace ProjectCSharp.Database
             string qr = "";
             foreach (KeyValuePair<string, object> entry in entries)
             {
+
                 ql += entry.Key + ",";
                 qr += "@" + entry.Key + ",";
                 pr.Add(new SqlParameter("@" + entry.Key, entry.Value));
@@ -217,7 +218,10 @@ namespace ProjectCSharp.Database
                 cmd.Parameters.Add(p);
             }
 
-            return (Int32)cmd.ExecuteScalar();
+            con.Open();
+            int lastID = (Int32)cmd.ExecuteScalar();
+            con.Close();
+            return lastID;
         }
 
         public QueryBuilder insert(Dictionary<string, object> entries)
@@ -257,6 +261,11 @@ namespace ProjectCSharp.Database
             if (type == QueryBuilder.AND) return " AND ";
             if (type == QueryBuilder.OR) return " OR ";
             return " AND ";
+        }
+
+        public static Dictionary<string, object> getDictionary()
+        {
+            return new Dictionary<string, object>();
         }
 
         private void setup()

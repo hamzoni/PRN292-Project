@@ -10,5 +10,6 @@ namespace ProjectCSharp.DAL
         public static AccountDAO accMdl = new AccountDAO();
         public static MediaDAO medMdl = new MediaDAO();
         public static PlayListDAO plMdl = new PlayListDAO();
+        public static PlaylistMediaDAO plmedMdl = new PlaylistMediaDAO();
     }
 }
