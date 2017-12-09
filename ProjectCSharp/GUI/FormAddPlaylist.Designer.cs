@@ -120,6 +120,7 @@
             this.list_medias.Size = new System.Drawing.Size(326, 178);
             this.list_medias.TabIndex = 3;
             this.list_medias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.list_medias.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.list_medias_CellEndEdit);
             // 
             // panel2
             // 
@@ -187,7 +188,6 @@
             this.dialog_openFile.FileName = "openFileDialog1";
             this.dialog_openFile.Filter = "MP3 file (*.mp3)|*.mp3|All file(*.*)|*.*";
             this.dialog_openFile.Multiselect = true;
-            this.dialog_openFile.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // FormNewlPlayList
             // 

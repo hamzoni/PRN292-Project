@@ -1,5 +1,6 @@
 ﻿using ProjectCSharp.DAL;
 using ProjectCSharp.Database;
+using ProjectCSharp.Entities;
 using ProjectCSharp.GUI;
 using ProjectCSharp.GUIDynamic;
 using ProjectCSharp.Utility;
@@ -31,6 +32,7 @@ namespace ProjectCSharp.Controller
         private List<ThreadStart> dts;
         private List<Thread> dt;
 
+        public Playlist playlist;
         public FormMain gui;
 
         public MainController(FormMain gui)
@@ -62,12 +64,27 @@ namespace ProjectCSharp.Controller
             loadVideoList();
         }
 
+        public void loadPlaylist(Playlist playlist)
+        {
+            resetVideoList();
+
+            this.playlist = playlist;
+            foreach (Media media in playlist.medias)
+            {
+                videoUrls.Add(media.url);
+                videoNames.Add(media.name);
+            }
+
+            loadVideoPlaylist();
+
+            gui.label_playlist.Text = playlist.name;
+        }
+
         public void landing()
         {
             gui.btnLogin.Enabled = false;
             gui.btnSong.Enabled = true;
             gui.btnVideo.Enabled = true;
-            gui.btnLogout.Visible = true;
 
             if (auth != null)
             {
@@ -154,6 +171,17 @@ namespace ProjectCSharp.Controller
             }
         }
 
+        // load video from a playlist
+        public void loadVideoPlaylist()
+        {
+            gui.list_videos.Items.Clear();
+            foreach (String name in videoNames)
+            {
+                gui.list_videos.Items.Add(name);
+            }
+        }
+
+        // load video from a folder
         public void loadVideoList()
         {
             string[] files = Directory.GetFiles(playFolder);
@@ -162,7 +190,7 @@ namespace ProjectCSharp.Controller
             {
                 string ext = Path.GetExtension(file);
                 if (!FolderCtrl.isValidFile(ext)) continue;
-                videoUrls.Add(file);
+                videoUrls.Add(@file);
 
                 string fn = Path.GetFileName(file);
                 videoNames.Add(fn);
@@ -172,8 +200,9 @@ namespace ProjectCSharp.Controller
 
         public void playVideo(int index)
         {
+            if (index < 0 || index >= videoUrls.Count) return;
             string path = videoUrls[index];
-            gui.television.URL = @path;
+            gui.tv.URL = @path;
         }
     }
 }

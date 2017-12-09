@@ -151,6 +151,7 @@
     <Compile Include="Utility\MSG.cs" />
     <Compile Include="Utility\PathEncoder.cs" />
     <Compile Include="Utility\ProcessCtrl.cs" />
+    <Compile Include="Utility\UIHelper.cs" />
     <EmbeddedResource Include="GUI\FormDetailPlaylist.resx">
       <DependentUpon>FormDetailPlaylist.cs</DependentUpon>
     </EmbeddedResource>

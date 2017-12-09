@@ -10,6 +10,8 @@ using ProjectCSharp.Entities;
 using TagLib;
 using ProjectCSharp.DAL;
 using ProjectCSharp.Controller;
+using ProjectCSharp.Utility;
+using System.IO;
 
 namespace ProjectCSharp
 {
@@ -75,11 +77,11 @@ namespace ProjectCSharp
         }
    
         //check media is exist in list or not
-        public bool checkExistMedia(string title, string url)
+        public bool checkDuplicated(string url)
         {
             foreach (Media item in playlist.medias)
             {
-                if (item.name == title &&  item.url == url)
+                if (item.url == url)
                     return true;
             }
             return false;
@@ -98,14 +100,21 @@ namespace ProjectCSharp
 
                 for (int i = 0; i < dialog_openFile.FileNames.Length; i++)
                 {
-                    TagLib.File tagFile = TagLib.File.Create(dialog_openFile.FileNames[i]);
+                    string fn = dialog_openFile.FileNames[i];
+                    TagLib.File tagFile = TagLib.File.Create(fn);
                     string title = tagFile.Tag.Title;
                     string url = dialog_openFile.FileNames[i].ToString();
 
-                    if (!checkExistMedia(title, url))
+                    if (!checkDuplicated(url))
                     {
                         Media media = new Media();
                         media.name = title;
+
+                        if (string.IsNullOrEmpty(title))
+                        {
+                            media.name = Path.GetFileName(fn);
+                        }
+
                         media.url = url;
                         media.type = true;
 
@@ -138,12 +147,7 @@ namespace ProjectCSharp
         private void btnDelete_Click(object sender, EventArgs e)
         {
             // get indices of selected medias
-            List<int> indices = new List<int>();
-            for (int i = 0; i < list_medias.SelectedRows.Count;  i++)
-            {
-                int index = list_medias.SelectedRows[i].Index;
-                indices.Add(index);
-            }
+            List<int> indices = UIHelper.getSelectedIndices(list_medias);
             // remove all selected medias - both in list and in view
             indices.Sort();
             indices.Reverse();
@@ -178,9 +182,11 @@ namespace ProjectCSharp
             Close();
         }
 
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        private void list_medias_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-
+            // update media name
+            string val = (string)list_medias.Rows[e.RowIndex].Cells[0].Value;
+            playlist.medias[e.RowIndex].name = val;
         }
     }
 }

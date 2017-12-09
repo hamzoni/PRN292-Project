@@ -107,7 +107,6 @@
             this.list_playlists.Size = new System.Drawing.Size(360, 252);
             this.list_playlists.TabIndex = 8;
             this.list_playlists.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.list_playlists.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnNewPlaylist
             // 
@@ -135,6 +134,7 @@
             this.btnEdit.Size = new System.Drawing.Size(48, 26);
             this.btnEdit.TabIndex = 12;
             this.btnEdit.Text = "Edit";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // panel1
             // 

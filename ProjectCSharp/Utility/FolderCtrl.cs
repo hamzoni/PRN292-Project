@@ -11,14 +11,14 @@ namespace ProjectCSharp.Utility
         {
             string usn = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
             string[] lines = usn.Split(new char[] { '\\' });
-            return "C: \\Users\\" + lines[1] + "\\Videos";
+            return "C:\\Users\\" + lines[1] + "\\Videos";
         }
 
         public static string getDownloadDir()
         {
             string usn = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
             string[] lines = usn.Split(new char[] { '\\' });
-            return "C: \\Users\\" + lines[1] + "\\Downloads";
+            return "C:\\Users\\" + lines[1] + "\\Downloads";
         }
 
         public static bool isValidFile(string fn)

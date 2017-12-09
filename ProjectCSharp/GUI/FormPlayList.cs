@@ -12,6 +12,8 @@ using ProjectCSharp.Entities;
 using System.IO;
 using ProjectCSharp.Controller;
 using ProjectCSharp.DAL;
+using ProjectCSharp.Utility;
+using ProjectCSharp.GUI;
 
 namespace ProjectCSharp
 {
@@ -93,7 +95,7 @@ namespace ProjectCSharp
         int index;
         private void btnViewDetail_Click(object sender, EventArgs e)
         {
-            int index = getSelectedIndices(list_playlists)[0];
+            int index = UIHelper.getSelectedIndices(list_playlists)[0];
 
             new FormDetailPlaylist(playlists[index]).Show();
         }
@@ -126,7 +128,7 @@ namespace ProjectCSharp
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            List<int> indices = getSelectedIndices(list_playlists);
+            List<int> indices = UIHelper.getSelectedIndices(list_playlists);
             indices.Sort();
             indices.Reverse();
             
@@ -143,29 +145,22 @@ namespace ProjectCSharp
             }
         }
 
-        public List<int> getSelectedIndices(DataGridView dgv)
-        {
-            List<int> indices = new List<int>();
-            for (int i = 0; i < dgv.SelectedCells.Count; i++)
-            {
-                indices.Add(dgv.SelectedCells[i].RowIndex);
-            }
-            return indices;
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btn_choosePlaylist_Click(object sender, EventArgs e)
         {
-            int index = getSelectedIndices(list_playlists)[0];
+            int index = UIHelper.getSelectedIndices(list_playlists)[0];
             Playlist playlist = playlists[index];
 
-            // ctrl.loadPlaylist();
+            ctrl.loadPlaylist(playlist);
 
             Close();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            int index = UIHelper.getSelectedIndices(list_playlists)[0];
+            Playlist playlist = playlists[index];
+
+            new FormEditPlaylist(playlist, this).Show();
         }
     }
 }

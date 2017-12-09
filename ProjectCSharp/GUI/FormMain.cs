@@ -46,19 +46,9 @@ namespace ProjectCSharp
             A3 = new ButtonActionIS(ctrl.downloadVideo);
             A4 = new ButtonAction(ctrl.openDownloadFolder);
             A5 = new ButtonActionII(ctrl.playVideo);
-            // hide tab control
-            main_panel.Appearance = TabAppearance.FlatButtons;
-            main_panel.ItemSize = new Size(0, 1);
-            main_panel.SizeMode = TabSizeMode.Fixed;
         }
 
-        public void selectTab(int idx)
-        {
-            TabPage t = main_panel.TabPages[idx];
-            main_panel.SelectedTab = t;
-        }
-
-
+       
         
         private void btnMenu_Click(object sender, EventArgs e)
         {
@@ -137,8 +127,38 @@ namespace ProjectCSharp
             btnLogout.Visible = true;
         }
 
+        private void btn_playlist_Click_1(object sender, EventArgs e)
+        {
+            new FormPlayList(ctrl).ShowDialog();
+        }
 
-        private void btnLogout_Click(object sender, EventArgs e)
+
+        private void btn_choosePlayFolder_Click_1(object sender, EventArgs e)
+        {
+            A2();
+        }
+
+        private void btn_add_Click_2(object sender, EventArgs e)
+        {
+            A1();
+        }
+
+        private void btn_dwndir_Click_2(object sender, EventArgs e)
+        {
+            A4();
+        }
+
+        private void btn_download_Click_1(object sender, EventArgs e)
+        {
+            A3(input_url.Text);
+        }
+
+        private void list_videos_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            A5(list_videos.SelectedIndex);
+        }
+
+        private void btnLogout_Click_1(object sender, EventArgs e)
         {
             btnLogin.Enabled = true;
             btnSong.Enabled = false;
@@ -147,50 +167,9 @@ namespace ProjectCSharp
             btnLogout.Visible = false;
         }
 
-        private void btnVideo_Click(object sender, EventArgs e)
-        {
-            selectTab(0);
-        }
-
-        private void btnSong_Click(object sender, EventArgs e)
-        {
-            selectTab(1);
-        }
-
-        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
+        private void tv_Enter(object sender, EventArgs e)
         {
 
-        }
-
-        private void btn_download_Click(object sender, EventArgs e)
-        {
-            A3(input_url.Text);
-        }
-
-        private void btn_add_Click(object sender, EventArgs e)
-        {
-            A1();
-        }
-
-        private void btn_choosePlayFolder_Click(object sender, EventArgs e)
-        {
-
-            A2();
-        }
-
-        private void btn_dwndir_Click(object sender, EventArgs e)
-        {
-            A4();
-        }
-
-        private void list_videos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            A5(list_videos.SelectedIndex);
-        }
-
-        private void btn_playlist_Click(object sender, EventArgs e)
-        {
-            new FormPlayList(ctrl).ShowDialog();
         }
     }
 }
