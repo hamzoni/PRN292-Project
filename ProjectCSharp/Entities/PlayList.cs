@@ -12,5 +12,10 @@ namespace ProjectCSharp.Entities
         public Account user { get; set; }
         public int count { get; set; }
         public List<Media> medias { get; set; }
+
+        public Playlist()
+        {
+            medias = new List<Media>();
+        }
     }
 }

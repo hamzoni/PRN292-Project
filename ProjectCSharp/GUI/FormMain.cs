@@ -18,7 +18,7 @@ namespace ProjectCSharp
     public partial class FormMain : Form
     {
         bool hide = true;
-        Authentication auth;
+        
         MainController ctrl;
 
         private ButtonAction A1;
@@ -32,8 +32,7 @@ namespace ProjectCSharp
             
             InitializeComponent();
             lblUsername.Text = "";
-            auth = new Authentication(this);
-            landing();
+            
             setup();
         }
 
@@ -60,25 +59,7 @@ namespace ProjectCSharp
         }
 
 
-        public void landing()
-        {
-            btnLogin.Enabled = false;
-            btnSong.Enabled = true;
-            btnVideo.Enabled = true;
-            btnLogout.Visible = true;
-
-            if (auth != null)
-            {
-                if (auth.account != null)
-                {
-                    if (auth.account.username != null)
-                    {
-                        lblUsername.Text = " -   " + auth.account.username;
-                    }
-                }
-            }
-        }
-
+        
         private void btnMenu_Click(object sender, EventArgs e)
         {
             timer1.Start();
@@ -147,7 +128,8 @@ namespace ProjectCSharp
         //click login
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            auth.showLoginDialog();
+            FormLogin login = new FormLogin(ctrl.auth);
+            login.ShowDialog();
         }
 
         private void lblUsername_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -206,6 +188,9 @@ namespace ProjectCSharp
             A5(list_videos.SelectedIndex);
         }
 
-        
+        private void btn_playlist_Click(object sender, EventArgs e)
+        {
+            new FormPlayList(ctrl).ShowDialog();
+        }
     }
 }

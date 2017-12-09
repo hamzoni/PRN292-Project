@@ -13,7 +13,7 @@ using ProjectCSharp.DAL;
 
 namespace ProjectCSharp
 {
-    public partial class FormLogin : Form
+    partial class FormLogin : Form
     {
         public Account account { get; set; }
         public Authentication auth;

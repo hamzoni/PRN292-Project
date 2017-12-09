@@ -41,6 +41,24 @@ namespace ProjectCSharp.DAL
             return count != 0;
         }
 
+        public Account search(Account acc)
+        {
+            Account a = null;
+            DataRowCollection rows = (DataRowCollection)QueryBuilder.table(table)
+                .select()
+                .where("username", acc.username)
+                .where("password", acc.password)
+                .execute();
+            foreach (DataRow row in rows)
+            {
+                a = new Account();
+                a.id = (int)row["id"];
+                a.username = (string)row["username"];
+                a.password = (string)row["password"];
+            }
+            return a;
+        }
+
         public void delete(object x)
         {
             // get all playlist linked to this account

@@ -9,5 +9,11 @@ namespace ProjectCSharp.Entities
     {
         public Media media { get; set; }
         public Playlist playlist { get; set; }
+
+        public PlaylistMedia()
+        {
+            this.media = new Media();
+            this.playlist = new Playlist();
+        }
     }
 }

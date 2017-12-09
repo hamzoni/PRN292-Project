@@ -15,7 +15,7 @@ using ProjectCSharp.DAL;
 
 namespace ProjectCSharp
 {
-    public partial class FormRegister : Form
+    partial class FormRegister : Form
     {
         public Account account;
         public FormLogin login;

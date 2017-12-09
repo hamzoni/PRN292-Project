@@ -15,6 +15,7 @@ namespace ProjectCSharp.DAL
         public List<Playlist> searchByAccount(int accountID)
         {
             List<Playlist> lists = new List<Playlist>();
+
             DataRowCollection rows = (DataRowCollection)QueryBuilder.table(table)
                 .select()
                 .where("account_id", accountID)
@@ -27,7 +28,8 @@ namespace ProjectCSharp.DAL
                 playlist.name = (string)row["name"];
                 playlist.medias = DataModel.medMdl.searchByPlaylist(playlist.id);
                 playlist.count = count(playlist.id);
-                break;
+
+                lists.Add(playlist);
             }
             return lists;
         }
@@ -93,7 +95,7 @@ namespace ProjectCSharp.DAL
             }
         }
 
-        public bool insert(Playlist playlist, int userId)
+        public bool insert(Playlist playlist)
         {
             // there must be no duplicated playlist name
             if (count(playlist.name) != 0) return false;
@@ -113,13 +115,14 @@ namespace ProjectCSharp.DAL
             // add medias
             foreach (Media media in playlist.medias)
             {
+                // create media
                 int mediaID = DataModel.medMdl.insertGetId(media);
 
+                // create relationship between media and playlist
                 PlaylistMedia plmed = new PlaylistMedia();
                 plmed.playlist.id = playlistID;
                 plmed.media.id = mediaID;
-
-                // create relationship between media and playlist
+                
                 DataModel.plmedMdl.insert(plmed);
             }
 
@@ -148,18 +151,6 @@ namespace ProjectCSharp.DAL
                 pl.id = (int)row["id"];
             }
             return null;
-        }
-
-        public bool insert(Playlist x)
-        {
-            Dictionary<string, object> pairs = new Dictionary<string, object>();
-            pairs.Add("name", x.name);
-
-            int c = (int) QueryBuilder.table(table)
-                .insert(pairs)
-                .execute();
-
-            return c != 0;
         }
 
         public void update(Playlist x)

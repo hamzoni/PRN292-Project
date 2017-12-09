@@ -17,6 +17,8 @@ namespace ProjectCSharp.Controller
 {
     class MainController
     {
+        public Authentication auth;
+
         public List<string> videoUrls;
         public List<string> videoNames;
         public string playFolder;
@@ -34,6 +36,10 @@ namespace ProjectCSharp.Controller
         public MainController(FormMain gui)
         {
             this.gui = gui;
+
+            auth = new Authentication(this);
+
+            landing();
 
             // Initialize variables
             videoUrls = new List<string>();
@@ -54,6 +60,25 @@ namespace ProjectCSharp.Controller
 
             // listing video
             loadVideoList();
+        }
+
+        public void landing()
+        {
+            gui.btnLogin.Enabled = false;
+            gui.btnSong.Enabled = true;
+            gui.btnVideo.Enabled = true;
+            gui.btnLogout.Visible = true;
+
+            if (auth != null)
+            {
+                if (auth.account != null)
+                {
+                    if (auth.account.username != null)
+                    {
+                        gui.lblUsername.Text = " -   " + auth.account.username;
+                    }
+                }
+            }
         }
 
         public void downloadVideo(string url)

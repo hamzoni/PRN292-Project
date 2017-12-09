@@ -37,7 +37,7 @@ namespace ProjectCSharp.DAL
             pairs.Add("playlist_id", x.playlist.id);
             pairs.Add("media_id", x.media.id);
 
-            int c = (int) QueryBuilder.table(table)
+            int c = (int)QueryBuilder.table(table)
                 .insert(pairs)
                 .execute();
 

@@ -84,6 +84,7 @@
     </Compile>
     <Compile Include="DAL\MediaDAO.cs" />
     <Compile Include="DAL\PlayListDAO.cs" />
+    <Compile Include="DAL\PlaylistMediaDAO.cs" />
     <Compile Include="Database\QueryBuilder.cs" />
     <Compile Include="Entities\Media.cs" />
     <Compile Include="Entities\Playlist.cs" />
@@ -107,17 +108,17 @@
     <Compile Include="GUI\FormEditPlaylist.Designer.cs">
       <DependentUpon>FormEditPlaylist.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FormNewlPlayList.cs">
+    <Compile Include="GUI\FormAddPlaylist.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\FormNewlPlayList.Designer.cs">
-      <DependentUpon>FormNewlPlayList.cs</DependentUpon>
+    <Compile Include="GUI\FormAddPlaylist.Designer.cs">
+      <DependentUpon>FormAddPlaylist.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FormPlayList.cs">
+    <Compile Include="GUI\FormPlaylist.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\FormPlayList.Designer.cs">
-      <DependentUpon>FormPlayList.cs</DependentUpon>
+    <Compile Include="GUI\FormPlaylist.Designer.cs">
+      <DependentUpon>FormPlaylist.cs</DependentUpon>
     </Compile>
     <Compile Include="Middleware\Authentication.cs" />
     <Compile Include="DAL\AccountDAO.cs" />
@@ -165,11 +166,11 @@
     <EmbeddedResource Include="GUI\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormNewlPlayList.resx">
-      <DependentUpon>FormNewlPlayList.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\FormAddPlaylist.resx">
+      <DependentUpon>FormAddPlaylist.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormPlayList.resx">
-      <DependentUpon>FormPlayList.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\FormPlaylist.resx">
+      <DependentUpon>FormPlaylist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

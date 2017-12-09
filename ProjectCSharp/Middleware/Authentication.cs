@@ -1,4 +1,5 @@
-﻿using ProjectCSharp.DAL;
+﻿using ProjectCSharp.Controller;
+using ProjectCSharp.DAL;
 using ProjectCSharp.Entities;
 using System;
 using System.Collections.Generic;
@@ -7,25 +8,25 @@ using System.Text;
 
 namespace ProjectCSharp
 {
-    public class Authentication
+    class Authentication
     {
-        private FormMain main;
+        private MainController ctrl;
         public Account account { get; set; }
 
-        public Authentication(FormMain main)
+        public Authentication(MainController ctrl)
         {
-            this.main = main;
-        }
+            this.ctrl = ctrl;
+            // fake login
+            account = new Account();
+            account.username = "A";
+            account.password = "123";
 
-        public void showLoginDialog()
-        {
-            FormLogin login = new FormLogin(this);
-            login.ShowDialog();
+            account = DataModel.accMdl.search(account);
         }
 
         public void loginSuccess()
         {
-            main.landing();
+            ctrl.landing();
         }
     }
 }

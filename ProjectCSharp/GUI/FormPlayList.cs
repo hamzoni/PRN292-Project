@@ -10,34 +10,34 @@ using System.Data.SqlClient;
 using System.Configuration;
 using ProjectCSharp.Entities;
 using System.IO;
+using ProjectCSharp.Controller;
+using ProjectCSharp.DAL;
 
 namespace ProjectCSharp
 {
      partial class FormPlayList : Form
-        {
+     {
 
-        List<Playlist> list;
-        public Playlist playlist;
+        private List<Playlist> playlists;
+        private MainController ctrl;
+
         public FormPlayList()
         {
             InitializeComponent();
-            list = new List<Playlist>();
-            test(ref list);
-            loadToDataGridView();
         }
 
-
-        private void test(ref List<Playlist> list)
+        public FormPlayList(MainController ctrl)
         {
-            for (int i = 0; i < 10; i++)
-            {
-                Playlist pl = new Playlist();
-                pl.name = "A" + i;
-                pl.count = i + 10;
-                list.Add(pl);
-            }
-            
+            InitializeComponent();
+            this.ctrl = ctrl;
+            setup();
         }
+
+        private void setup()
+        {
+            loadPlaylists();
+        }
+
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -80,33 +80,22 @@ namespace ProjectCSharp
 
         private void btnNewPlaylist_Click(object sender, EventArgs e)
         {
-            FormNewlPlayList npl = new FormNewlPlayList();
+            FormNewlPlayList npl = new FormNewlPlayList(ctrl, this);
             npl.ShowDialog();
         }
 
+        public void loadPlaylists()
+        {
+            playlists = DataModel.plMdl.searchByAccount(ctrl.auth.account.id);
+            loadToDataGridView();
+        }
 
         int index;
         private void btnViewDetail_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.RowCount == 0) return;
-            if (index>=0)
-            {
-                
-                DataGridViewRow selectedRow = dataGridView1.Rows[index];
-                string playlistName = selectedRow.Cells[1].Value.ToString();
-                foreach (Playlist pl in list)
-                {
-                    if (pl.name == playlistName)
-                    {
-                        playlist = pl;
-                        break;
-                    }
-                }
-                //ko hieu sao ko truyen vao 1 playlist dc nen phai truyen vao ca class =(((
-                FormDetailPlaylist dpl = new FormDetailPlaylist(playlist);
-                dpl.ShowDialog();
-            }
-            
+            int index = getSelectedIndices(list_playlists)[0];
+
+            new FormDetailPlaylist(playlists[index]).Show();
         }
 
 
@@ -127,17 +116,56 @@ namespace ProjectCSharp
             dt.Columns.Add("Name");
             dt.Columns.Add("Count");
 
-            for (int i = 0;i < list.Count; i++)
+            for (int i = 0; i < playlists.Count; i++)
             {
-                dt.Rows.Add(new object[] { i + 1, list[i].name, list[i].count });
+                dt.Rows.Add(new object[] { i + 1, playlists[i].name, playlists[i].count });
             }
 
-            dataGridView1.DataSource = dt;
+            list_playlists.DataSource = dt;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            List<int> indices = getSelectedIndices(list_playlists);
+            indices.Sort();
+            indices.Reverse();
+            
+            foreach (int index in indices)
+            {
+                // delete in views
+                list_playlists.Rows.RemoveAt(index);
 
+                // delete in database
+                DataModel.plMdl.delete(playlists[index].id);
+
+                // delete in memory
+                playlists.RemoveAt(index);
+            }
+        }
+
+        public List<int> getSelectedIndices(DataGridView dgv)
+        {
+            List<int> indices = new List<int>();
+            for (int i = 0; i < dgv.SelectedCells.Count; i++)
+            {
+                indices.Add(dgv.SelectedCells[i].RowIndex);
+            }
+            return indices;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btn_choosePlaylist_Click(object sender, EventArgs e)
+        {
+            int index = getSelectedIndices(list_playlists)[0];
+            Playlist playlist = playlists[index];
+
+            // ctrl.loadPlaylist();
+
+            Close();
         }
     }
 }
