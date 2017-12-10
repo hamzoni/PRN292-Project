@@ -94,7 +94,10 @@ namespace ProjectCSharp
 
         private void btnViewDetail_Click(object sender, EventArgs e)
         {
-            int index = UIHelper.getSelectedIndices(list_playlists)[0];
+            List<int> list = UIHelper.getSelectedIndices(list_playlists);
+            if (list.Count == 0) return;
+
+            int index = list[0];
 
             new FormDetailPlaylist(playlists[index]).Show();
         }

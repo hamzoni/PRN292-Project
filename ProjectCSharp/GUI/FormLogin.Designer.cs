@@ -33,6 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkbox_autologin = new System.Windows.Forms.CheckBox();
             this.linkLabelRegister = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -80,6 +81,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.checkbox_autologin);
             this.panel1.Controls.Add(this.linkLabelRegister);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnLogin);
@@ -91,6 +93,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 300);
             this.panel1.TabIndex = 5;
+            // 
+            // checkbox_autologin
+            // 
+            this.checkbox_autologin.AutoSize = true;
+            this.checkbox_autologin.Location = new System.Drawing.Point(51, 159);
+            this.checkbox_autologin.Name = "checkbox_autologin";
+            this.checkbox_autologin.Size = new System.Drawing.Size(118, 17);
+            this.checkbox_autologin.TabIndex = 8;
+            this.checkbox_autologin.Text = "Auto login next time";
+            this.checkbox_autologin.UseVisualStyleBackColor = true;
             // 
             // linkLabelRegister
             // 
@@ -117,9 +129,9 @@
             // 
             this.btnLogin.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(51, 187);
+            this.btnLogin.Location = new System.Drawing.Point(51, 203);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(199, 52);
+            this.btnLogin.Size = new System.Drawing.Size(199, 36);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -135,6 +147,7 @@
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -151,5 +164,6 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.LinkLabel linkLabelRegister;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox checkbox_autologin;
     }
 }

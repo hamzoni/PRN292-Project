@@ -147,6 +147,7 @@
     <Compile Include="GUI\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Middleware\MultipleForm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GUI\FormRegister.cs">
@@ -156,6 +157,8 @@
       <DependentUpon>FormRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Utility\DataHelper.cs" />
+    <Compile Include="Utility\Encryptor.cs" />
+    <Compile Include="Utility\FileIO.cs" />
     <Compile Include="Utility\FolderCtrl.cs" />
     <Compile Include="Utility\Download.cs" />
     <Compile Include="Utility\MSG.cs" />

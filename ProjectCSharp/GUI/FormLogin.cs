@@ -39,21 +39,44 @@ namespace ProjectCSharp
             if (DataModel.accMdl.login(acc))
             {
                 acc = DataModel.accMdl.search(acc);
-
-                FormMain form = new FormMain();
-                form.ctrl.auth.account = acc;
-                form.ctrl.landing();
-
-                form.Show();
-
-                Hide();
+                if (checkbox_autologin.Checked)
+                {
+                    Authentication.setRememberToken(acc.id);
+                }
+                login(acc);
             }
+        }
+
+        private void checkAutologin()
+        {
+            object token = Authentication.getRememberToken();
+            if (token == null) return;
+
+            int accountID = Int32.Parse(token.ToString());
+            Account acc = DataModel.accMdl.searchByID(accountID);
+            if (acc != null) login(acc);
+        }
+
+        private void login(Account acc)
+        {
+            FormMain form = new FormMain();
+            form.ctrl.auth.account = acc;
+            form.ctrl.landing();
+            form.Show();
+
+            Hide();
+            Dispose(false);
         }
 
         private void linkLabelRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FormRegister register = new FormRegister(this);
             register.ShowDialog();
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+            checkAutologin();
         }
     }
 }
