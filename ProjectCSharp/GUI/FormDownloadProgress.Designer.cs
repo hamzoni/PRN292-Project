@@ -38,7 +38,9 @@
             this.Name = "FormDownloadProgress";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Download Manager";
+            this.Activated += new System.EventHandler(this.FormDownloadProgress_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormDownloadProgress_FormClosing);
+            this.Load += new System.EventHandler(this.FormDownloadProgress_Load);
             this.ResumeLayout(false);
 
         }

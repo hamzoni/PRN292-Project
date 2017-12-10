@@ -44,7 +44,7 @@ namespace ProjectCSharp.Controller
             dlt = new List<Download>();
 
             // UI setting
-            dlf = new FormDownloadProgress();
+            dlf = new FormDownloadProgress(gui);
             dlf.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dlcg = new FormDownloadCG(dlf, this);
             
@@ -74,15 +74,19 @@ namespace ProjectCSharp.Controller
             gui.label_playlist.Text = playlist.name;
         }
 
-        public void landing()
+        public void landing(bool isAuto)
         {
+            if (!isAuto)
+            {
+                gui.checkbox_stopAutoLogin.Dispose();
+            }
             if (auth != null)
             {
                 if (auth.account != null)
                 {
                     if (auth.account.username != null)
                     {
-                        gui.lblUsername.Text = " -   " + auth.account.username;
+                        gui.lblUsername.Text = " Welcome " + auth.account.username;
                     }
                 }
             }

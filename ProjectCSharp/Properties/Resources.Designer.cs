@@ -19,7 +19,7 @@ namespace ProjectCSharp.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -63,6 +63,36 @@ namespace ProjectCSharp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _018972_glossy_waxed_wood_icon_symbols_shapes_minimize {
+            get {
+                object obj = ResourceManager.GetObject("018972-glossy-waxed-wood-icon-symbols-shapes-minimize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _018972_glossy_waxed_wood_icon_symbols_shapes_minimize1 {
+            get {
+                object obj = ResourceManager.GetObject("018972-glossy-waxed-wood-icon-symbols-shapes-minimize1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _018972_glossy_waxed_wood_icon_symbols_shapes_minimize2 {
+            get {
+                object obj = ResourceManager.GetObject("018972-glossy-waxed-wood-icon-symbols-shapes-minimize2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _101_disco_32 {
             get {
                 object obj = ResourceManager.GetObject("101-disco-32", resourceCulture);
@@ -83,9 +113,89 @@ namespace ProjectCSharp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _17_71 {
+            get {
+                object obj = ResourceManager.GetObject("17-71", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _17_711 {
+            get {
+                object obj = ResourceManager.GetObject("17-711", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _17_712 {
+            get {
+                object obj = ResourceManager.GetObject("17-712", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _17_713 {
+            get {
+                object obj = ResourceManager.GetObject("17-713", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _237046_folder_add_plus_24 {
             get {
                 object obj = ResourceManager.GetObject("237046-folder_add_plus-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3_red_cherry_png_image_download_thumb {
+            get {
+                object obj = ResourceManager.GetObject("3-red-cherry-png-image-download-thumb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _543720afe1272f6e82000116_icon_256x256 {
+            get {
+                object obj = ResourceManager.GetObject("543720afe1272f6e82000116-icon-256x256", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _55b6fc5f52ba0b759000632d_icon_256x256 {
+            get {
+                object obj = ResourceManager.GetObject("55b6fc5f52ba0b759000632d-icon-256x256", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add {
+            get {
+                object obj = ResourceManager.GetObject("add", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,6 +223,142 @@ namespace ProjectCSharp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap beautiful_old_natural_wooden_texture_vintage_dark_background_wood_cracks_fading_86014768 {
+            get {
+                object obj = ResourceManager.GetObject("beautiful-old-natural-wooden-texture-vintage-dark-background-wood-cracks-fading-8" +
+                        "6014768", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap beautiful_old_natural_wooden_texture_vintage_dark_background_wood_cracks_fading_860147681 {
+            get {
+                object obj = ResourceManager.GetObject("beautiful-old-natural-wooden-texture-vintage-dark-background-wood-cracks-fading-8" +
+                        "60147681", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap beautiful_old_natural_wooden_texture_vintage_dark_background_wood_cracks_fading_860147682 {
+            get {
+                object obj = ResourceManager.GetObject("beautiful-old-natural-wooden-texture-vintage-dark-background-wood-cracks-fading-8" +
+                        "60147682", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap beautiful_old_natural_wooden_texture_vintage_dark_background_wood_cracks_fading_860147683 {
+            get {
+                object obj = ResourceManager.GetObject("beautiful-old-natural-wooden-texture-vintage-dark-background-wood-cracks-fading-8" +
+                        "60147683", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap beautiful_old_natural_wooden_texture_vintage_dark_background_wood_cracks_fading_860147684 {
+            get {
+                object obj = ResourceManager.GetObject("beautiful-old-natural-wooden-texture-vintage-dark-background-wood-cracks-fading-8" +
+                        "60147684", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap beautiful_old_natural_wooden_texture_vintage_dark_background_wood_cracks_fading_860147685 {
+            get {
+                object obj = ResourceManager.GetObject("beautiful-old-natural-wooden-texture-vintage-dark-background-wood-cracks-fading-8" +
+                        "60147685", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buttons_PNG105 {
+            get {
+                object obj = ResourceManager.GetObject("buttons_PNG105", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cherry {
+            get {
+                object obj = ResourceManager.GetObject("Cherry", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap coollogo_com_2568242 {
+            get {
+                object obj = ResourceManager.GetObject("coollogo_com-2568242", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap coollogo_com_26520121 {
+            get {
+                object obj = ResourceManager.GetObject("coollogo_com-26520121", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap coollogo_com_265201211 {
+            get {
+                object obj = ResourceManager.GetObject("coollogo_com-265201211", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dark_wood_texture_andifurniture_dark_wood {
+            get {
+                object obj = ResourceManager.GetObject("dark-wood-texture-andifurniture-dark-wood", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap doremon {
+            get {
+                object obj = ResourceManager.GetObject("doremon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap download_24 {
             get {
                 object obj = ResourceManager.GetObject("download-24", resourceCulture);
@@ -126,6 +372,16 @@ namespace ProjectCSharp.Properties {
         internal static System.Drawing.Bitmap final_fantasy_video_game_wallpaper_16399_16917_hd_wallpapers {
             get {
                 object obj = ResourceManager.GetObject("final-fantasy-video-game-wallpaper-16399-16917-hd-wallpapers", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap folder {
+            get {
+                object obj = ResourceManager.GetObject("folder", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,6 +429,26 @@ namespace ProjectCSharp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ivy_1394991_960_720 {
+            get {
+                object obj = ResourceManager.GetObject("ivy-1394991_960_720", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ivy_1394991_960_7201 {
+            get {
+                object obj = ResourceManager.GetObject("ivy-1394991_960_7201", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap log_out_32 {
             get {
                 object obj = ResourceManager.GetObject("log_out-32", resourceCulture);
@@ -196,6 +472,16 @@ namespace ProjectCSharp.Properties {
         internal static System.Drawing.Bitmap loginIcon {
             get {
                 object obj = ResourceManager.GetObject("loginIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout {
+            get {
+                object obj = ResourceManager.GetObject("logout", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -326,6 +612,46 @@ namespace ProjectCSharp.Properties {
         internal static System.Drawing.Bitmap square_facebook_32 {
             get {
                 object obj = ResourceManager.GetObject("square-facebook-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap strawberry_icon {
+            get {
+                object obj = ResourceManager.GetObject("strawberry-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wood__texture559 {
+            get {
+                object obj = ResourceManager.GetObject("wood _texture559", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wood__texture5591 {
+            get {
+                object obj = ResourceManager.GetObject("wood _texture5591", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wood__texture5592 {
+            get {
+                object obj = ResourceManager.GetObject("wood _texture5592", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

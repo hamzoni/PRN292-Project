@@ -33,8 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblNameOfPlaylist = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblNameOfPlaylist = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -42,6 +42,8 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = global::ProjectCSharp.Properties.Resources.beautiful_old_natural_wooden_texture_vintage_dark_background_wood_cracks_fading_860147683;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -67,12 +69,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Tekton Pro Ext", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.OrangeRed;
             this.label1.Location = new System.Drawing.Point(109, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 24);
+            this.label1.Size = new System.Drawing.Size(154, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Playlist Detail";
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
@@ -99,30 +101,34 @@
             this.panel2.Size = new System.Drawing.Size(353, 5);
             this.panel2.TabIndex = 1;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.AntiqueWhite;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.Color.Coral;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 60);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(329, 248);
+            this.dataGridView1.TabIndex = 3;
+            // 
             // lblNameOfPlaylist
             // 
             this.lblNameOfPlaylist.AutoSize = true;
+            this.lblNameOfPlaylist.BackColor = System.Drawing.Color.Transparent;
             this.lblNameOfPlaylist.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameOfPlaylist.ForeColor = System.Drawing.Color.White;
-            this.lblNameOfPlaylist.Location = new System.Drawing.Point(12, 69);
+            this.lblNameOfPlaylist.Location = new System.Drawing.Point(8, 33);
             this.lblNameOfPlaylist.Name = "lblNameOfPlaylist";
             this.lblNameOfPlaylist.Size = new System.Drawing.Size(158, 24);
             this.lblNameOfPlaylist.TabIndex = 2;
             this.lblNameOfPlaylist.Text = "Name of Playlist";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 105);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(322, 182);
-            this.dataGridView1.TabIndex = 3;
             // 
             // FormDetailPlaylist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.BackgroundImage = global::ProjectCSharp.Properties.Resources.wood__texture5591;
             this.ClientSize = new System.Drawing.Size(353, 320);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblNameOfPlaylist);
@@ -148,7 +154,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblNameOfPlaylist;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lblNameOfPlaylist;
     }
 }

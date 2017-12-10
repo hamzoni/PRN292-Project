@@ -75,8 +75,16 @@ namespace ProjectCSharp.DAL
 
         public void delete(object x)
         {
+            List<Media> mIDs = DataModel.medMdl.searchByPlaylist((int)x);
+
             // delete in n-n table first
             DataModel.plmedMdl.deleteByPlaylist((int)x);
+
+            // delete medias
+            foreach (Media m in mIDs)
+            {
+                DataModel.medMdl.delete(m.id);
+            }
 
             // delete in official table
             QueryBuilder.table(table)

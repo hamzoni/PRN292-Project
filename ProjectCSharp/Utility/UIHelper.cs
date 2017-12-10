@@ -18,6 +18,14 @@ namespace ProjectCSharp.Utility
             return indices;
         }
 
-        
+        public static void removeBorderButton(params Button[] btns)
+        {
+            foreach (Button b in btns)
+            {
+                b.TabStop = false;
+                b.FlatStyle = FlatStyle.Flat;
+                b.FlatAppearance.BorderSize = 0;
+            }
+        }
     }
 }

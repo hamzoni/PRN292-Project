@@ -23,6 +23,11 @@ namespace ProjectCSharp
             ctrl.auth = this;
         }
 
+        public static void removeRememberToken()
+        {
+            FileIO.remove(rmfn);
+        }
+
         public static void setRememberToken(int id)
         {
             string token = Encryptor.Encrypt(id.ToString());

@@ -326,6 +326,102 @@
   <ItemGroup>
     <None Include="Images\music-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttons_PNG105.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17-71.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wood _texture559.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beautiful-old-natural-wooden-texture-vintage-dark-background-wood-cracks-fading-86014768.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17-711.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wood _texture5591.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beautiful-old-natural-wooden-texture-vintage-dark-background-wood-cracks-fading-860147681.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17-712.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beautiful-old-natural-wooden-texture-vintage-dark-background-wood-cracks-fading-860147682.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beautiful-old-natural-wooden-texture-vintage-dark-background-wood-cracks-fading-860147683.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\018972-glossy-waxed-wood-icon-symbols-shapes-minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17-713.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark-wood-texture-andifurniture-dark-wood.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wood _texture5592.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ivy-1394991_960_720.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ivy-1394991_960_7201.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doremon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coollogo_com-26520121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coollogo_com-265201211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coollogo_com-2568242.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beautiful-old-natural-wooden-texture-vintage-dark-background-wood-cracks-fading-860147684.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beautiful-old-natural-wooden-texture-vintage-dark-background-wood-cracks-fading-860147685.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cherry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3-red-cherry-png-image-download-thumb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\strawberry-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\55b6fc5f52ba0b759000632d-icon-256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\543720afe1272f6e82000116-icon-256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\018972-glossy-waxed-wood-icon-symbols-shapes-minimize1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\018972-glossy-waxed-wood-icon-symbols-shapes-minimize2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Accord.3.8.0\build\Accord.targets" Condition="Exists('..\packages\Accord.3.8.0\build\Accord.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

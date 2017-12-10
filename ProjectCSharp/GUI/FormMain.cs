@@ -48,10 +48,7 @@ namespace ProjectCSharp
             A5 = new ButtonActionII(ctrl.playVideo);
         }
 
-        private void btnMenu_Click(object sender, EventArgs e)
-        {
-            timer1.Start();
-        }
+     
 
         //function mainpanel silde
         private void timer1_Tick(object sender, EventArgs e)
@@ -59,7 +56,7 @@ namespace ProjectCSharp
             if (hide == true)
             {
                 panelSlide.Width = panelSlide.Width + 10;
-                if (panelSlide.Width >= 180)
+                if (panelSlide.Width >= 190)
                 {
                     timer1.Stop();
                     hide = false;
@@ -113,7 +110,7 @@ namespace ProjectCSharp
 
         private void btnLogout_Click_1(object sender, EventArgs e)
         {
-            new FormLogin().Show();
+            new FormLogin(true, checkbox_stopAutoLogin.Checked).Show();
             Dispose();
         }
 
@@ -130,7 +127,7 @@ namespace ProjectCSharp
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             ctrl.closeAllProcesses();
-            // Environment.Exit(0);
+            Application.Exit();
         }
 
         private void downloaderToolStripMenuItem_Click(object sender, EventArgs e)
@@ -146,6 +143,16 @@ namespace ProjectCSharp
         private void playlistToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new FormPlayList(ctrl).Show();
+        }
+
+        private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
         }
     }
 }

@@ -99,6 +99,8 @@ namespace ProjectCSharp
 
             int index = list[0];
 
+            if (index >= playlists.Count) return;
+
             new FormDetailPlaylist(playlists[index]).Show();
         }
 
@@ -126,7 +128,10 @@ namespace ProjectCSharp
             List<int> indices = UIHelper.getSelectedIndices(list_playlists);
             indices.Sort();
             indices.Reverse();
-            
+
+            list_playlists.AllowUserToAddRows = false;
+            if (list_playlists.Rows.Count == 0) return;
+
             foreach (int index in indices)
             {
                 // delete in views
@@ -142,7 +147,14 @@ namespace ProjectCSharp
 
         private void btn_choosePlaylist_Click(object sender, EventArgs e)
         {
-            int index = UIHelper.getSelectedIndices(list_playlists)[0];
+            List<int> list = UIHelper.getSelectedIndices(list_playlists);
+            if (list.Count == 0) return;
+
+           
+
+            int index = list[0];
+
+            if (index < 0 || index >= playlists.Count) return;
             Playlist playlist = playlists[index];
 
             ctrl.loadPlaylist(playlist);
@@ -152,7 +164,10 @@ namespace ProjectCSharp
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            int index = UIHelper.getSelectedIndices(list_playlists)[0];
+            List<int> list = UIHelper.getSelectedIndices(list_playlists);
+            if (list.Count == 0) return;
+
+            int index = list[0];
             Playlist playlist = playlists[index];
 
             new FormEditPlaylist(playlist, this).Show();

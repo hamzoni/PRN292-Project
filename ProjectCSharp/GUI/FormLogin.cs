@@ -17,11 +17,21 @@ namespace ProjectCSharp
     partial class FormLogin : Form
     {
         public Account account { get; set; }
+        private bool isLogout;
+        private bool stopAutoLogin;
 
         public FormLogin()
         {
             InitializeComponent();
             txtPassword.PasswordChar = '*';
+        }
+
+        public FormLogin(bool isLogout, bool stopAutoLogin)
+        {
+            InitializeComponent();
+            txtPassword.PasswordChar = '*';
+            this.isLogout = isLogout;
+            this.stopAutoLogin = stopAutoLogin;
         }
 
         public void autofill(Account acc)
@@ -43,7 +53,7 @@ namespace ProjectCSharp
                 {
                     Authentication.setRememberToken(acc.id);
                 }
-                login(acc);
+                login(acc, false);
             }
         }
 
@@ -54,14 +64,14 @@ namespace ProjectCSharp
 
             int accountID = Int32.Parse(token.ToString());
             Account acc = DataModel.accMdl.searchByID(accountID);
-            if (acc != null) login(acc);
+            if (acc != null) login(acc, true);
         }
 
-        private void login(Account acc)
+        private void login(Account acc, bool isAuto)
         {
             FormMain form = new FormMain();
             form.ctrl.auth.account = acc;
-            form.ctrl.landing();
+            form.ctrl.landing(isAuto);
             form.Show();
 
             Hide();
@@ -76,7 +86,19 @@ namespace ProjectCSharp
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-            checkAutologin();
+            if (stopAutoLogin)
+            {
+                Authentication.removeRememberToken();
+            }
+            if (!isLogout)
+            {
+                checkAutologin();
+            }
+        }
+
+        private void FormLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
