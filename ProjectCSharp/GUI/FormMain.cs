@@ -1,5 +1,6 @@
 ﻿using ProjectCSharp.Controller;
 using ProjectCSharp.Database;
+using ProjectCSharp.Entities;
 using ProjectCSharp.GUI;
 using System;
 using System.Collections.Generic;
@@ -16,11 +17,11 @@ delegate void ButtonActionII(int x);
 
 namespace ProjectCSharp
 {
-    public partial class FormMain : Form
+    partial class FormMain : Form
     {
-        bool hide = true;
+        private bool hide = true;
         
-        MainController ctrl;
+        public MainController ctrl;
 
         private ButtonAction A1;
         private ButtonAction A2;
@@ -30,17 +31,15 @@ namespace ProjectCSharp
 
         public FormMain()
         {
-            
             InitializeComponent();
-            lblUsername.Text = "";
-            
             setup();
         }
 
         private void setup()
         {
-            // create controller
+            // setup controller
             ctrl = new MainController(this);
+            
             // setup delegate
             A1 = new ButtonAction(ctrl.addVideo);
             A2 = new ButtonAction(ctrl.openPlayFolder);
@@ -148,6 +147,7 @@ namespace ProjectCSharp
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             ctrl.closeAllProcesses();
+            // Environment.Exit(0);
         }
     }
 }

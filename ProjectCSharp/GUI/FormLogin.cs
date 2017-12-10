@@ -10,19 +10,18 @@ using System.Configuration;
 using System.Data.SqlClient;
 using ProjectCSharp.Entities;
 using ProjectCSharp.DAL;
+using System.Threading;
 
 namespace ProjectCSharp
 {
     partial class FormLogin : Form
     {
         public Account account { get; set; }
-        public Authentication auth;
 
         public FormLogin()
         {
             InitializeComponent();
             txtPassword.PasswordChar = '*';
-            auth = new Authentication();
         }
 
         public void autofill(Account acc)
@@ -39,12 +38,15 @@ namespace ProjectCSharp
 
             if (DataModel.accMdl.login(acc))
             {
-                auth.account = acc;
-                auth.loginSuccess();
+                acc = DataModel.accMdl.search(acc);
 
-                new FormMain().ShowDialog();
+                FormMain form = new FormMain();
+                form.ctrl.auth.account = acc;
+                form.ctrl.landing();
 
-                this.Hide();
+                form.Show();
+
+                Hide();
             }
         }
 
@@ -53,6 +55,5 @@ namespace ProjectCSharp
             FormRegister register = new FormRegister(this);
             register.ShowDialog();
         }
-
     }
 }

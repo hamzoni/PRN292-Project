@@ -13,14 +13,11 @@ namespace ProjectCSharp
         public MainController ctrl;
         public Account account { get; set; }
 
-        public Authentication()
+        public Authentication(MainController ctrl)
         {
-            account = new Account();
+            this.ctrl = ctrl;
+            ctrl.auth = this;
         }
 
-        public void loginSuccess()
-        {
-            ctrl.landing();
-        }
     }
 }

@@ -36,8 +36,7 @@ namespace ProjectCSharp.Controller
         public MainController(FormMain gui)
         {
             this.gui = gui;
-
-            auth = new Authentication(this);
+            this.auth = new Authentication(this);
 
             // Initialize variables
             videoUrls = new List<string>();
@@ -95,6 +94,10 @@ namespace ProjectCSharp.Controller
         {
             foreach (Download d in dlt)
             {
+                if (d.p.HasExited)
+                {
+                    continue;
+                }
                 d.p.Kill();
                 d.p.Close();
             }
@@ -104,6 +107,7 @@ namespace ProjectCSharp.Controller
         {
             int index = -1;
             Download d = Download.findDownload(dlt, id, ref index);
+
             // close process
             if (!d.p.HasExited)
             {

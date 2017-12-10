@@ -74,18 +74,24 @@ namespace ProjectCSharp.Utility
 
             mpb.lbn.Text = getTitle();
 
-            while (!p.StandardOutput.EndOfStream)
+            if (p == null) return;
+            try
             {
-                string line = p.StandardOutput.ReadLine();
-                string progress = line.Substring(10, 4);
-                string text = line.Substring(12, line.Length - 12);
+                while (!p.StandardOutput.EndOfStream)
+                {
+                    string line = p.StandardOutput.ReadLine();
+                    string progress = line.Substring(10, 4);
+                    string text = line.Substring(12, line.Length - 12);
 
-                int x = 0;
-                int.TryParse(progress, out x);
+                    int x = 0;
+                    int.TryParse(progress, out x);
 
-                FormDownloadCG.setValue(mpb, x, text);
+                    FormDownloadCG.setValue(mpb, x, text);
+                }
+            } catch (Exception exp)
+            {
+
             }
-       
         }
 
         public string getTitle()
@@ -97,11 +103,12 @@ namespace ProjectCSharp.Utility
                 return process.StandardOutput.ReadLine();
             }
             return "Untitled";
+            
         }
 
         public void downloadVideo()
         {
-            download_url = "https://www.youtube.com/watch?v=wI__53kBBKM";
+            // download_url = "https://www.youtube.com/watch?v=wI__53kBBKM";
 
             String cmd = download_url + " -o " + storedir_url + "\\%(title)s.%(ext)s --max-downloads 1 --newline";
             p = ProcessCtrl.mkp(@"youtube-dl.exe", cmd);
