@@ -103,7 +103,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 23);
+            this.label3.Size = new System.Drawing.Size(122, 34);
             this.label3.TabIndex = 3;
             this.label3.Text = "List name";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -113,19 +113,23 @@
             // 
             this.input_playlistName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.input_playlistName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.input_playlistName.Location = new System.Drawing.Point(128, 3);
+            this.input_playlistName.Location = new System.Drawing.Point(128, 0);
+            this.input_playlistName.Margin = new System.Windows.Forms.Padding(0);
+            this.input_playlistName.Multiline = true;
             this.input_playlistName.Name = "input_playlistName";
-            this.input_playlistName.Size = new System.Drawing.Size(236, 27);
+            this.input_playlistName.Size = new System.Drawing.Size(245, 34);
             this.input_playlistName.TabIndex = 4;
             // 
             // list_medias
             // 
             this.list_medias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.list_medias.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.list_medias.Location = new System.Drawing.Point(3, 32);
+            this.list_medias.Location = new System.Drawing.Point(3, 37);
             this.list_medias.Name = "list_medias";
-            this.list_medias.Size = new System.Drawing.Size(367, 201);
+            this.list_medias.Size = new System.Drawing.Size(367, 196);
             this.list_medias.TabIndex = 5;
+            this.list_medias.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.list_medias_CellEndEdit);
+            this.list_medias.KeyUp += new System.Windows.Forms.KeyEventHandler(this.list_medias_KeyUp);
             // 
             // btnSave
             // 
@@ -133,10 +137,10 @@
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.Location = new System.Drawing.Point(270, 2);
+            this.btnSave.Location = new System.Drawing.Point(263, 2);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(95, 50);
+            this.btnSave.Size = new System.Drawing.Size(102, 50);
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -148,10 +152,10 @@
             this.btnAdd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.Black;
-            this.btnAdd.Location = new System.Drawing.Point(122, 2);
+            this.btnAdd.Location = new System.Drawing.Point(119, 2);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(144, 50);
+            this.btnAdd.Size = new System.Drawing.Size(140, 50);
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -166,7 +170,7 @@
             this.btnDelete.Location = new System.Drawing.Point(2, 2);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(116, 50);
+            this.btnDelete.Size = new System.Drawing.Size(113, 50);
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -177,7 +181,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.82759F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.17241F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 105F));
             this.tableLayoutPanel1.Controls.Add(this.btnDelete, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnSave, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnAdd, 1, 0);
@@ -200,8 +204,8 @@
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 27);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.63158F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.36842F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.40678F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.59322F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 59F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(373, 296);
             this.tableLayoutPanel2.TabIndex = 12;
@@ -214,11 +218,12 @@
             this.tableLayoutPanel3.Controls.Add(this.input_playlistName, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(367, 23);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(373, 34);
             this.tableLayoutPanel3.TabIndex = 13;
             // 
             // FormEditPlaylist
@@ -232,6 +237,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormEditPlaylist";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEditPlaylist";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

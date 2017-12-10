@@ -1,5 +1,6 @@
 ﻿using ProjectCSharp.Controller;
 using ProjectCSharp.Database;
+using ProjectCSharp.GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +11,7 @@ using System.Text;
 using System.Windows.Forms;
 
 delegate void ButtonAction();
-delegate void ButtonActionIS(string x);
+delegate void ButtonActionIS(string x, bool y);
 delegate void ButtonActionII(int x);
 
 namespace ProjectCSharp
@@ -43,13 +44,11 @@ namespace ProjectCSharp
             // setup delegate
             A1 = new ButtonAction(ctrl.addVideo);
             A2 = new ButtonAction(ctrl.openPlayFolder);
-            A3 = new ButtonActionIS(ctrl.downloadVideo);
+            A3 = new ButtonActionIS(ctrl.downloadMedia);
             A4 = new ButtonAction(ctrl.openDownloadFolder);
             A5 = new ButtonActionII(ctrl.playVideo);
         }
 
-       
-        
         private void btnMenu_Click(object sender, EventArgs e)
         {
             timer1.Start();
@@ -112,10 +111,7 @@ namespace ProjectCSharp
         {
             btnVideo.Font = new Font(Font.FontFamily, 12);
         }
-        //--------------------------------------------
-
-
-        //click login
+  
         private void btnLogin_Click(object sender, EventArgs e)
         {
             FormLogin login = new FormLogin(ctrl.auth);
@@ -126,13 +122,7 @@ namespace ProjectCSharp
         {
             btnLogout.Visible = true;
         }
-
-        private void btn_playlist_Click_1(object sender, EventArgs e)
-        {
-            new FormPlayList(ctrl).ShowDialog();
-        }
-
-
+     
         private void btn_choosePlayFolder_Click_1(object sender, EventArgs e)
         {
             A2();
@@ -142,16 +132,7 @@ namespace ProjectCSharp
         {
             A1();
         }
-
-        private void btn_dwndir_Click_2(object sender, EventArgs e)
-        {
-            A4();
-        }
-
-        private void btn_download_Click_1(object sender, EventArgs e)
-        {
-            A3(input_url.Text);
-        }
+        
 
         private void list_videos_SelectedIndexChanged_1(object sender, EventArgs e)
         {
@@ -167,9 +148,29 @@ namespace ProjectCSharp
             btnLogout.Visible = false;
         }
 
-        private void tv_Enter(object sender, EventArgs e)
+        private void btn_playList_Click(object sender, EventArgs e)
         {
+            new FormPlayList(ctrl).Show();
+        }
 
+        private void btn_downloadManager_Click(object sender, EventArgs e)
+        {
+            ctrl.dlf.Show();
+        }
+
+        private void btn_dwndir_Click(object sender, EventArgs e)
+        {
+            A4();
+        }
+
+        private void btn_download_Click(object sender, EventArgs e)
+        {
+            A3(input_url.Text, radio_movie.Checked);
+        }
+
+        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ctrl.closeAllProcesses();
         }
     }
 }

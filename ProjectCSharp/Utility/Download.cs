@@ -13,20 +13,41 @@ namespace ProjectCSharp.Utility
     {
         event DDownload EDownload;
 
+        public static int id = 0;
+        public int cid;
+
         public string download_url;
         public string storedir_url;
-        private CustomProgressBar mpb;
+        public bool isMovie;
+
+        public CustomProgressBar mpb;
 
         private DDownload D1;
         private DDownload D2;
 
-        public Download(ref CustomProgressBar pb)
+        public Process p;
+
+        public Download()
         {
-            mpb = pb;
+            Download.id += 1;
+            this.cid = Download.id;
 
             EDownload += new DDownload(encodePath);
             D1 = new DDownload(downloadVideo);
             D2 = new DDownload(downloadMusic);
+        }
+
+        public static Download findDownload(List<Download> dl, int id, ref int i)
+        {
+            for (int j = 0; j < dl.Count; j++)
+            {
+                if (dl[j].cid == id)
+                {
+                    i = j;
+                    return dl[j];
+                }
+            }
+            return null;
         }
 
         private void encodePath()
@@ -37,18 +58,25 @@ namespace ProjectCSharp.Utility
         public void dvid()
         {
             EDownload();
-            D1();
+            if (isMovie)
+            {
+                D1();
+            } else
+            {
+                D2();
+            }
         }
 
         public void downloadMusic()
         {
-            String cmd = " --extract-audio --audio-format mp3 " + download_url + " -o " + storedir_url + "\\%(title)s.%(ext)s  --verbose --max-downloads 1 --newline";
+            String cmd = " --extract-audio --audio-format mp3 " + download_url + " -o " + storedir_url + "\\%(title)s.%(ext)s  --max-downloads 1 --newline";
+            p = ProcessCtrl.mkp(@"youtube-dl.exe", cmd);
 
-            Process process = ProcessCtrl.mkp(@"youtube-dl.exe", cmd);
+            mpb.lbn.Text = getTitle();
 
-            while (!process.StandardOutput.EndOfStream)
+            while (!p.StandardOutput.EndOfStream)
             {
-                string line = process.StandardOutput.ReadLine();
+                string line = p.StandardOutput.ReadLine();
                 string progress = line.Substring(10, 4);
                 string text = line.Substring(12, line.Length - 12);
 
@@ -60,24 +88,44 @@ namespace ProjectCSharp.Utility
        
         }
 
-        public void downloadVideo()
+        public string getTitle()
         {
-            download_url = "https://www.youtube.com/watch?v=azYEiOh_FFo";
-            String cmd = download_url + " -o " + storedir_url + "\\%(title)s.%(ext)s --max-downloads 1 --newline";
-
+            String cmd = download_url + " -o " + storedir_url + "\\%(title)s.%(ext)s --get-title --max-downloads 1 --newline";
             Process process = ProcessCtrl.mkp(@"youtube-dl.exe", cmd);
-       
             while (!process.StandardOutput.EndOfStream)
             {
-                string line = process.StandardOutput.ReadLine();
-                string progress = line.Substring(10, 4);
-                string text = line.Substring(12, line.Length - 12);
+                return process.StandardOutput.ReadLine();
+            }
+            return "Untitled";
+        }
 
-                int x = 0;
-                int.TryParse(progress, out x);
-                        
-                FormDownloadCG.setValue(mpb, x, text);
-                Console.WriteLine(mpb.Value);
+        public void downloadVideo()
+        {
+            download_url = "https://www.youtube.com/watch?v=wI__53kBBKM";
+
+            String cmd = download_url + " -o " + storedir_url + "\\%(title)s.%(ext)s --max-downloads 1 --newline";
+            p = ProcessCtrl.mkp(@"youtube-dl.exe", cmd);
+            
+            mpb.lbn.Text = getTitle();
+
+            if (p == null) return;
+            try
+            {
+                while (!p.StandardOutput.EndOfStream)
+                {
+                    string line = p.StandardOutput.ReadLine();
+                    string progress = line.Substring(10, 4);
+                    string text = line.Substring(12, line.Length - 12);
+
+                    int x = 0;
+                    int.TryParse(progress, out x);
+
+                    FormDownloadCG.setValue(mpb, x, text);
+                    // Console.WriteLine(mpb.Value);
+                }
+            } catch (Exception exp)
+            {
+
             }
         }
     }

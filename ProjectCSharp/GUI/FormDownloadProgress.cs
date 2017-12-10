@@ -19,7 +19,7 @@ namespace ProjectCSharp.GUI
         private void FormDownloadProgress_FormClosing(object sender, FormClosingEventArgs e)
         {
             Hide();
-            e.Cancel = false;
+            e.Cancel = true;
         }
     }
 }

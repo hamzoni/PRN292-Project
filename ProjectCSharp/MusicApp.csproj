@@ -76,6 +76,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\MainController.cs" />
+    <Compile Include="CustomUI\CustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CustomUI\CustomProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -146,6 +149,7 @@
     <Compile Include="GUI\FormRegister.Designer.cs">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utility\DataHelper.cs" />
     <Compile Include="Utility\FolderCtrl.cs" />
     <Compile Include="Utility\Download.cs" />
     <Compile Include="Utility\MSG.cs" />
@@ -297,6 +301,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\youtube-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movie-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\movie-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\music-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Accord.3.8.0\build\Accord.targets" Condition="Exists('..\packages\Accord.3.8.0\build\Accord.targets')" />

@@ -17,11 +17,11 @@ namespace ProjectCSharp
         {
             this.ctrl = ctrl;
             // fake login
-            account = new Account();
-            account.username = "A";
-            account.password = "123";
+            //account = new Account();
+            //account.username = "A";
+            //account.password = "123";
 
-            account = DataModel.accMdl.search(account);
+            // account = DataModel.accMdl.search(account);
         }
 
         public void loginSuccess()

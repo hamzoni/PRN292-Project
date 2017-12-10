@@ -5,6 +5,7 @@ using System.Text;
 
 namespace ProjectCSharp.Entities
 {
+    [Serializable]
     public class Account
     {
         public int id { get; set; }

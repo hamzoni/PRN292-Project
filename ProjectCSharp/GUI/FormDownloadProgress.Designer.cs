@@ -34,9 +34,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(275, 0);
             this.Name = "FormDownloadProgress";
-            this.Text = "FormDownloadProgress";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Download Manager";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormDownloadProgress_FormClosing);
             this.ResumeLayout(false);
 

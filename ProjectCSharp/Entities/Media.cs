@@ -5,6 +5,7 @@ using System.Text;
 
 namespace ProjectCSharp.Entities
 {
+    [Serializable]
     class Media
     {
         public int id { get; set; }

@@ -101,8 +101,18 @@ namespace ProjectCSharp
                 for (int i = 0; i < dialog_openFile.FileNames.Length; i++)
                 {
                     string fn = dialog_openFile.FileNames[i];
-                    TagLib.File tagFile = TagLib.File.Create(fn);
-                    string title = tagFile.Tag.Title;
+                    
+                    string title = "";
+
+                    try
+                    {
+                        TagLib.File tagFile = TagLib.File.Create(fn);
+                        title = tagFile.Tag.Title;
+                    } catch (Exception exp)
+                    {
+
+                    }
+                   
                     string url = dialog_openFile.FileNames[i].ToString();
 
                     if (!checkDuplicated(url))

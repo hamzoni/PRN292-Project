@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectCSharp.CustomUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,13 +10,25 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class CustomProgressBar : ProgressBar
+    partial class CustomProgressBar : ProgressBar
     {
-        public String Text;
+        public Label lbn = new Label();
+        public Panel gpn = new Panel();
+        public CustomButton btn = new CustomButton();
+
         public CustomProgressBar()
         {
             InitializeComponent();
             this.SetStyle(ControlStyles.UserPaint | ControlStyles.AllPaintingInWmPaint, true);
+            
+        }
+
+        public void removeGUI()
+        {
+            lbn.Dispose();
+            gpn.Dispose();
+            btn.Dispose();
+            this.Dispose();
         }
 
         protected override void OnPaint(PaintEventArgs pe)

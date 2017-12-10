@@ -92,20 +92,12 @@ namespace ProjectCSharp
             loadToDataGridView();
         }
 
-        int index;
         private void btnViewDetail_Click(object sender, EventArgs e)
         {
             int index = UIHelper.getSelectedIndices(list_playlists)[0];
 
             new FormDetailPlaylist(playlists[index]).Show();
         }
-
-
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            index = e.RowIndex;
-        }
-
 
 
         //load database to data grid view

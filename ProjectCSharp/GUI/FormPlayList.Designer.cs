@@ -106,7 +106,6 @@
             this.list_playlists.Name = "list_playlists";
             this.list_playlists.Size = new System.Drawing.Size(360, 252);
             this.list_playlists.TabIndex = 8;
-            this.list_playlists.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnNewPlaylist
             // 
@@ -206,7 +205,9 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.MinimizeBox = false;
             this.Name = "FormPlayList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSavePlayList";
             ((System.ComponentModel.ISupportInitialize)(this.list_playlists)).EndInit();
             this.panel1.ResumeLayout(false);

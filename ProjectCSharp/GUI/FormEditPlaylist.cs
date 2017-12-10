@@ -28,8 +28,8 @@ namespace ProjectCSharp.GUI
         public FormEditPlaylist(Playlist playlist, FormPlayList gui)
         {
             InitializeComponent();
-            this.oldPL = playlist;
-            this.newPL = playlist;
+            this.oldPL = DataHelper.clone<Playlist>(playlist);
+            this.newPL = DataHelper.clone<Playlist>(playlist);
             this.gui = gui;
             setup();
         }
@@ -101,12 +101,17 @@ namespace ProjectCSharp.GUI
 
             // remove duplicated medias in new list
             List<int> indices = new List<int>();
+            List<Media> updMds = new List<Media>();
             foreach (Media i in oldPL.medias)
             {
                 for (int j = 0; j < newPL.medias.Count; j++)
                 {
                     if (newPL.medias[j].url.Equals(i.url))
                     {
+                        if (!newPL.medias[j].name.Equals(i.name))
+                        {
+                            updMds.Add(newPL.medias[j]);
+                        }
                         indices.Add(j);
                     }
                 }
@@ -116,6 +121,11 @@ namespace ProjectCSharp.GUI
             foreach (int i in indices)
             {
                 newPL.medias.RemoveAt(i);
+            }
+            // Update medias
+            foreach (Media m in updMds)
+            {
+                DataModel.medMdl.update(m);
             }
 
             // Add media to database
@@ -196,6 +206,17 @@ namespace ProjectCSharp.GUI
                     MessageBox.Show("This media already exist is your playlist", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
+        }
+
+        private void list_medias_KeyUp(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void list_medias_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            string newName = (string)list_medias.Rows[e.RowIndex].Cells[1].Value;
+            newPL.medias[e.RowIndex].name = newName;
         }
     }
 }

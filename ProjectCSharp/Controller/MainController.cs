@@ -26,11 +26,9 @@ namespace ProjectCSharp.Controller
         public string downloadFolder;
         public string videoUrl;
 
-        private FormDownloadProgress dlf;
+        public FormDownloadProgress dlf;
         private FormDownloadCG dlcg;
         private List<Download> dlt;
-        private List<ThreadStart> dts;
-        private List<Thread> dt;
 
         public Playlist playlist;
         public FormMain gui;
@@ -41,18 +39,15 @@ namespace ProjectCSharp.Controller
 
             auth = new Authentication(this);
 
-            landing();
-
             // Initialize variables
             videoUrls = new List<string>();
             videoNames = new List<string>();
             dlt = new List<Download>();
-            dts = new List<ThreadStart>();
-            dt = new List<Thread>();
 
             // UI setting
             dlf = new FormDownloadProgress();
-            dlcg = new FormDownloadCG(dlf);
+            dlf.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dlcg = new FormDownloadCG(dlf, this);
             
 
             // get default folder
@@ -98,20 +93,56 @@ namespace ProjectCSharp.Controller
             }
         }
 
-        public void downloadVideo(string url)
+        public void closeAllProcesses()
         {
-            CustomProgressBar pgb = dlcg.addProgressbar("A");
-            
-            Download dtt = new Download(ref pgb);
+            foreach (Download d in dlt)
+            {
+                d.p.Kill();
+                d.p.Close();
+            }
+        }
+
+        public void cancelDownload(int id)
+        {
+            int index = -1;
+            Download d = Download.findDownload(dlt, id, ref index);
+            // close process
+            if (!d.p.HasExited)
+            {
+                d.p.Kill();
+                d.p.Close();
+            }
+
+            // clear component UI
+            dlt.RemoveAt(index);
+            d.mpb.removeGUI();
+            dlcg.pbars.RemoveAt(index);
+
+            // update main form UI
+            int h = FormDownloadCG.blkh;
+            dlf.Height = h * (dlt.Count + 1) + 10;
+
+            for (int i = index; i < dlt.Count; i++)
+            {
+                dlt[i].mpb.gpn.Location = new System.Drawing.Point(
+                        dlt[i].mpb.gpn.Location.X,
+                        h * i + 10
+                    );
+            }
+        }
+
+        public void downloadMedia(string url, bool isMovie)
+        {
+            Download dtt = new Download();
             dtt.download_url = url;
             dtt.storedir_url = downloadFolder;
+            dtt.isMovie = isMovie;
+            dtt.mpb = dlcg.addProgressbar("Loading...");
 
             ThreadStart ts = new ThreadStart(dtt.dvid);
             Thread t = new Thread(ts);
 
             dlt.Add(dtt);
-            dts.Add(ts);
-            dt.Add(t);
 
             // show Progress bar in UI
             dlf.Show();
