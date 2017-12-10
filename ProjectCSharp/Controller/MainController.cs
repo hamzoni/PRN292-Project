@@ -139,7 +139,7 @@ namespace ProjectCSharp.Controller
 
         public void downloadMedia(string url, bool isMovie)
         {
-            Download dtt = new Download();
+            Download dtt = new Download(this);
             dtt.download_url = url;
             dtt.storedir_url = downloadFolder;
             dtt.isMovie = isMovie;

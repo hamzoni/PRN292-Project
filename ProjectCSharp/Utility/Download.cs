@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using WindowsFormsApp1;
 using ProjectCSharp.GUIDynamic;
+using ProjectCSharp.Controller;
 
 namespace ProjectCSharp.Utility
 {
@@ -21,20 +22,27 @@ namespace ProjectCSharp.Utility
         public bool isMovie;
 
         public CustomProgressBar mpb;
+        public MainController ctrl;
 
         private DDownload D1;
         private DDownload D2;
 
         public Process p;
 
-        public Download()
+        public Download(MainController ctrl)
         {
             Download.id += 1;
             this.cid = Download.id;
+            this.ctrl = ctrl;
 
             EDownload += new DDownload(encodePath);
             D1 = new DDownload(downloadVideo);
             D2 = new DDownload(downloadMusic);
+        }
+
+        public void downloadFinish()
+        {
+            ctrl.cancelDownload(id);
         }
 
         public static Download findDownload(List<Download> dl, int id, ref int i)
@@ -92,6 +100,7 @@ namespace ProjectCSharp.Utility
             {
 
             }
+            downloadFinish();
         }
 
         public string getTitle()
@@ -134,6 +143,7 @@ namespace ProjectCSharp.Utility
             {
 
             }
+            downloadFinish();
         }
     }
 }

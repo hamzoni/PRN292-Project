@@ -198,6 +198,7 @@
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
             this.profileToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.profileToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.profileToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.profileToolStripMenuItem.Size = new System.Drawing.Size(132, 39);
             this.profileToolStripMenuItem.Text = "Profile";
             this.profileToolStripMenuItem.Click += new System.EventHandler(this.profileToolStripMenuItem_Click);
@@ -209,6 +210,7 @@
             this.playlistToolStripMenuItem.Name = "playlistToolStripMenuItem";
             this.playlistToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.playlistToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.playlistToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
             this.playlistToolStripMenuItem.Size = new System.Drawing.Size(132, 39);
             this.playlistToolStripMenuItem.Text = "Playlist";
             this.playlistToolStripMenuItem.Click += new System.EventHandler(this.playlistToolStripMenuItem_Click);
@@ -220,6 +222,7 @@
             this.downloaderToolStripMenuItem.Name = "downloaderToolStripMenuItem";
             this.downloaderToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.downloaderToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.downloaderToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
             this.downloaderToolStripMenuItem.Size = new System.Drawing.Size(132, 39);
             this.downloaderToolStripMenuItem.Text = "Downloader";
             this.downloaderToolStripMenuItem.Click += new System.EventHandler(this.downloaderToolStripMenuItem_Click);
@@ -352,7 +355,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.20593F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.79407F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 126F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.btn_download, 0, 1);
@@ -376,12 +379,12 @@
             this.tableLayoutPanel5.ColumnCount = 3;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.67257F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.32743F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 444F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 445F));
             this.tableLayoutPanel5.Controls.Add(this.radio_music, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.radio_movie, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.input_url, 2, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(126, 38);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(127, 38);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -400,7 +403,7 @@
             this.radio_music.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.radio_music.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radio_music.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radio_music.Location = new System.Drawing.Point(29, 0);
+            this.radio_music.Location = new System.Drawing.Point(28, 0);
             this.radio_music.Margin = new System.Windows.Forms.Padding(0);
             this.radio_music.Name = "radio_music";
             this.radio_music.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -424,7 +427,7 @@
             this.radio_movie.Margin = new System.Windows.Forms.Padding(0);
             this.radio_movie.Name = "radio_movie";
             this.radio_movie.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.radio_movie.Size = new System.Drawing.Size(29, 38);
+            this.radio_movie.Size = new System.Drawing.Size(28, 38);
             this.radio_movie.TabIndex = 41;
             this.radio_movie.TabStop = true;
             this.radio_movie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -434,21 +437,21 @@
             // 
             this.input_url.Dock = System.Windows.Forms.DockStyle.Fill;
             this.input_url.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.input_url.Location = new System.Drawing.Point(59, 0);
+            this.input_url.Location = new System.Drawing.Point(58, 0);
             this.input_url.Margin = new System.Windows.Forms.Padding(0);
             this.input_url.Multiline = true;
             this.input_url.Name = "input_url";
             this.input_url.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.input_url.Size = new System.Drawing.Size(445, 38);
+            this.input_url.Size = new System.Drawing.Size(446, 38);
             this.input_url.TabIndex = 40;
             // 
             // btn_download
             // 
             this.btn_download.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_download.Location = new System.Drawing.Point(630, 38);
+            this.btn_download.Location = new System.Drawing.Point(631, 38);
             this.btn_download.Margin = new System.Windows.Forms.Padding(0);
             this.btn_download.Name = "btn_download";
-            this.btn_download.Size = new System.Drawing.Size(170, 38);
+            this.btn_download.Size = new System.Drawing.Size(169, 38);
             this.btn_download.TabIndex = 42;
             this.btn_download.Text = "Download";
             this.btn_download.UseVisualStyleBackColor = true;
@@ -458,7 +461,7 @@
             // 
             this.input_dwndir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.input_dwndir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.input_dwndir.Location = new System.Drawing.Point(126, 0);
+            this.input_dwndir.Location = new System.Drawing.Point(127, 0);
             this.input_dwndir.Margin = new System.Windows.Forms.Padding(0);
             this.input_dwndir.Multiline = true;
             this.input_dwndir.Name = "input_dwndir";
@@ -474,7 +477,7 @@
             this.label1.Location = new System.Drawing.Point(3, 12);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(120, 13);
+            this.label1.Size = new System.Drawing.Size(121, 13);
             this.label1.TabIndex = 44;
             this.label1.Text = "Download Folder";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -487,7 +490,7 @@
             this.label3.Location = new System.Drawing.Point(3, 50);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(120, 13);
+            this.label3.Size = new System.Drawing.Size(121, 13);
             this.label3.TabIndex = 41;
             this.label3.Text = "Youtube URL";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -496,11 +499,11 @@
             // 
             this.btn_dwndir.AutoSize = true;
             this.btn_dwndir.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_dwndir.Location = new System.Drawing.Point(630, 0);
+            this.btn_dwndir.Location = new System.Drawing.Point(631, 0);
             this.btn_dwndir.Margin = new System.Windows.Forms.Padding(0);
             this.btn_dwndir.Name = "btn_dwndir";
             this.btn_dwndir.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_dwndir.Size = new System.Drawing.Size(170, 38);
+            this.btn_dwndir.Size = new System.Drawing.Size(169, 38);
             this.btn_dwndir.TabIndex = 43;
             this.btn_dwndir.Text = "Change";
             this.btn_dwndir.UseVisualStyleBackColor = true;
