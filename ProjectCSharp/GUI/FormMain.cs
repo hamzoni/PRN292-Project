@@ -117,16 +117,6 @@ namespace ProjectCSharp
             Dispose();
         }
 
-        private void btn_playList_Click(object sender, EventArgs e)
-        {
-            new FormPlayList(ctrl).Show();
-        }
-
-        private void btn_downloadManager_Click(object sender, EventArgs e)
-        {
-            ctrl.dlf.Show();
-        }
-
         private void btn_dwndir_Click(object sender, EventArgs e)
         {
             A4();
@@ -143,15 +133,19 @@ namespace ProjectCSharp
             // Environment.Exit(0);
         }
 
-<<<<<<< HEAD
-        private void btn_profile_Click(object sender, EventArgs e)
+        private void downloaderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ctrl.dlf.Show();
+        }
+
+        private void profileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new FormProfile(ctrl).Show();
-=======
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
+        }
 
->>>>>>> 4dd77404509f15b5296921772ca3c754a2e32ade
+        private void playlistToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FormPlayList(ctrl).Show();
         }
     }
 }

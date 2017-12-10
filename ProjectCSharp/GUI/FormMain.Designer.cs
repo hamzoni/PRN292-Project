@@ -33,16 +33,19 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelSlide = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.btn_profile = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_playList = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_downloadManager = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.playlistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.downloaderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.btn_playList = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_downloadManager = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label_playlist = new System.Windows.Forms.Label();
             this.list_videos = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -63,12 +66,13 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelSlide.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.menuStrip2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -139,8 +143,8 @@
             // panelSlide
             // 
             this.panelSlide.BackColor = System.Drawing.Color.Teal;
-            this.panelSlide.Controls.Add(this.panel5);
             this.panelSlide.Controls.Add(this.panel1);
+            this.panelSlide.Controls.Add(this.menuStrip2);
             this.panelSlide.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSlide.Location = new System.Drawing.Point(0, 39);
             this.panelSlide.Margin = new System.Windows.Forms.Padding(0);
@@ -148,82 +152,8 @@
             this.panelSlide.Size = new System.Drawing.Size(32, 577);
             this.panelSlide.TabIndex = 2;
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Silver;
-            this.panel5.Controls.Add(this.menuStrip1);
-            this.panel5.Location = new System.Drawing.Point(34, 30);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(167, 124);
-            this.panel5.TabIndex = 41;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.AutoSize = false;
-            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menuStrip1.Font = new System.Drawing.Font("Century Gothic", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btn_profile,
-            this.btn_playList,
-            this.btn_downloadManager});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(167, 124);
-            this.menuStrip1.TabIndex = 40;
-            this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
-            // 
-            // btn_profile
-            // 
-<<<<<<< HEAD
-            this.btn_profile.Location = new System.Drawing.Point(35, 45);
-            this.btn_profile.Name = "btn_profile";
-            this.btn_profile.Size = new System.Drawing.Size(152, 40);
-            this.btn_profile.TabIndex = 3;
-            this.btn_profile.TabStop = false;
-            this.btn_profile.Text = "Profile";
-            this.btn_profile.UseVisualStyleBackColor = true;
-            this.btn_profile.Click += new System.EventHandler(this.btn_profile_Click);
-            // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-=======
-            this.btn_profile.AutoSize = false;
-            this.btn_profile.BackColor = System.Drawing.Color.LightGray;
-            this.btn_profile.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_profile.Name = "btn_profile";
-            this.btn_profile.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.btn_profile.Size = new System.Drawing.Size(168, 40);
-            this.btn_profile.Text = "Profile";
-            // 
-            // btn_playList
-            // 
-            this.btn_playList.AutoSize = false;
-            this.btn_playList.BackColor = System.Drawing.Color.Gainsboro;
-            this.btn_playList.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_playList.Name = "btn_playList";
-            this.btn_playList.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
-            this.btn_playList.Size = new System.Drawing.Size(168, 40);
-            this.btn_playList.Text = "Playlist";
-            this.btn_playList.Click += new System.EventHandler(this.btn_playList_Click);
-            // 
-            // btn_downloadManager
-            // 
-            this.btn_downloadManager.AutoSize = false;
-            this.btn_downloadManager.BackColor = System.Drawing.Color.LightGray;
-            this.btn_downloadManager.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_downloadManager.Name = "btn_downloadManager";
-            this.btn_downloadManager.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.btn_downloadManager.Size = new System.Drawing.Size(168, 40);
-            this.btn_downloadManager.Text = "Download";
-            this.btn_downloadManager.Click += new System.EventHandler(this.btn_downloadManager_Click);
-            // 
-            // panel1
-            // 
->>>>>>> 4dd77404509f15b5296921772ca3c754a2e32ade
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.btnMenu);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -245,6 +175,79 @@
             this.btnMenu.TabIndex = 2;
             this.btnMenu.UseVisualStyleBackColor = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
+            // menuStrip2
+            // 
+            this.menuStrip2.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.menuStrip2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.profileToolStripMenuItem,
+            this.playlistToolStripMenuItem,
+            this.downloaderToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(-113, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(145, 577);
+            this.menuStrip2.TabIndex = 1;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // profileToolStripMenuItem
+            // 
+            this.profileToolStripMenuItem.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.profileToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
+            this.profileToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
+            this.profileToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.profileToolStripMenuItem.Size = new System.Drawing.Size(132, 39);
+            this.profileToolStripMenuItem.Text = "Profile";
+            this.profileToolStripMenuItem.Click += new System.EventHandler(this.profileToolStripMenuItem_Click);
+            // 
+            // playlistToolStripMenuItem
+            // 
+            this.playlistToolStripMenuItem.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.playlistToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.playlistToolStripMenuItem.Name = "playlistToolStripMenuItem";
+            this.playlistToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
+            this.playlistToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.playlistToolStripMenuItem.Size = new System.Drawing.Size(132, 39);
+            this.playlistToolStripMenuItem.Text = "Playlist";
+            this.playlistToolStripMenuItem.Click += new System.EventHandler(this.playlistToolStripMenuItem_Click);
+            // 
+            // downloaderToolStripMenuItem
+            // 
+            this.downloaderToolStripMenuItem.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.downloaderToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.downloaderToolStripMenuItem.Name = "downloaderToolStripMenuItem";
+            this.downloaderToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
+            this.downloaderToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.downloaderToolStripMenuItem.Size = new System.Drawing.Size(132, 39);
+            this.downloaderToolStripMenuItem.Text = "Downloader";
+            this.downloaderToolStripMenuItem.Click += new System.EventHandler(this.downloaderToolStripMenuItem_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.AutoSize = false;
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btn_playList,
+            this.btn_downloadManager});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(167, 124);
+            this.menuStrip1.TabIndex = 40;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // btn_playList
+            // 
+            this.btn_playList.Name = "btn_playList";
+            this.btn_playList.Size = new System.Drawing.Size(160, 4);
+            // 
+            // btn_downloadManager
+            // 
+            this.btn_downloadManager.Name = "btn_downloadManager";
+            this.btn_downloadManager.Size = new System.Drawing.Size(160, 4);
             // 
             // panel2
             // 
@@ -278,8 +281,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.label_playlist);
-            this.panel4.Controls.Add(this.list_videos);
+            this.panel4.Controls.Add(this.tableLayoutPanel6);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
@@ -287,30 +289,46 @@
             this.panel4.Size = new System.Drawing.Size(158, 501);
             this.panel4.TabIndex = 41;
             // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Controls.Add(this.label_playlist, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.list_videos, 0, 1);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 2;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.97804F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.02196F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(158, 501);
+            this.tableLayoutPanel6.TabIndex = 41;
+            // 
             // label_playlist
             // 
             this.label_playlist.AutoSize = true;
-            this.label_playlist.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label_playlist.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_playlist.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_playlist.ForeColor = System.Drawing.Color.Coral;
             this.label_playlist.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label_playlist.Location = new System.Drawing.Point(0, 0);
+            this.label_playlist.Location = new System.Drawing.Point(3, 0);
             this.label_playlist.Name = "label_playlist";
-            this.label_playlist.Size = new System.Drawing.Size(75, 24);
+            this.label_playlist.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label_playlist.Size = new System.Drawing.Size(152, 54);
             this.label_playlist.TabIndex = 40;
-            this.label_playlist.Text = "#playlist";
+            this.label_playlist.Text = "QT";
             this.label_playlist.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // list_videos
             // 
             this.list_videos.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.list_videos.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.list_videos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.list_videos.FormattingEnabled = true;
-            this.list_videos.Location = new System.Drawing.Point(0, 55);
+            this.list_videos.Location = new System.Drawing.Point(0, 54);
             this.list_videos.Margin = new System.Windows.Forms.Padding(0);
             this.list_videos.Name = "list_videos";
             this.list_videos.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.list_videos.Size = new System.Drawing.Size(158, 446);
+            this.list_videos.Size = new System.Drawing.Size(158, 447);
             this.list_videos.TabIndex = 32;
             this.list_videos.SelectedIndexChanged += new System.EventHandler(this.list_videos_SelectedIndexChanged_1);
             // 
@@ -334,11 +352,8 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.20593F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.79407F));
-<<<<<<< HEAD
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123F));
-=======
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
->>>>>>> 4dd77404509f15b5296921772ca3c754a2e32ade
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.btn_download, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.input_dwndir, 1, 0);
@@ -361,32 +376,19 @@
             this.tableLayoutPanel5.ColumnCount = 3;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.67257F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.32743F));
-<<<<<<< HEAD
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 442F));
-=======
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 436F));
->>>>>>> 4dd77404509f15b5296921772ca3c754a2e32ade
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 444F));
             this.tableLayoutPanel5.Controls.Add(this.radio_music, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.radio_movie, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.input_url, 2, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-<<<<<<< HEAD
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(124, 36);
-=======
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(118, 38);
->>>>>>> 4dd77404509f15b5296921772ca3c754a2e32ade
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(126, 38);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-<<<<<<< HEAD
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(506, 37);
-=======
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(510, 38);
->>>>>>> 4dd77404509f15b5296921772ca3c754a2e32ade
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(504, 38);
             this.tableLayoutPanel5.TabIndex = 40;
             // 
             // radio_music
@@ -398,19 +400,11 @@
             this.radio_music.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.radio_music.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radio_music.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-<<<<<<< HEAD
-            this.radio_music.Location = new System.Drawing.Point(31, 0);
+            this.radio_music.Location = new System.Drawing.Point(29, 0);
             this.radio_music.Margin = new System.Windows.Forms.Padding(0);
             this.radio_music.Name = "radio_music";
             this.radio_music.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.radio_music.Size = new System.Drawing.Size(32, 37);
-=======
-            this.radio_music.Location = new System.Drawing.Point(36, 0);
-            this.radio_music.Margin = new System.Windows.Forms.Padding(0);
-            this.radio_music.Name = "radio_music";
-            this.radio_music.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.radio_music.Size = new System.Drawing.Size(37, 38);
->>>>>>> 4dd77404509f15b5296921772ca3c754a2e32ade
+            this.radio_music.Size = new System.Drawing.Size(30, 38);
             this.radio_music.TabIndex = 40;
             this.radio_music.UseVisualStyleBackColor = false;
             // 
@@ -430,11 +424,7 @@
             this.radio_movie.Margin = new System.Windows.Forms.Padding(0);
             this.radio_movie.Name = "radio_movie";
             this.radio_movie.RightToLeft = System.Windows.Forms.RightToLeft.No;
-<<<<<<< HEAD
-            this.radio_movie.Size = new System.Drawing.Size(31, 37);
-=======
-            this.radio_movie.Size = new System.Drawing.Size(36, 38);
->>>>>>> 4dd77404509f15b5296921772ca3c754a2e32ade
+            this.radio_movie.Size = new System.Drawing.Size(29, 38);
             this.radio_movie.TabIndex = 41;
             this.radio_movie.TabStop = true;
             this.radio_movie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -444,36 +434,21 @@
             // 
             this.input_url.Dock = System.Windows.Forms.DockStyle.Fill;
             this.input_url.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.input_url.Location = new System.Drawing.Point(63, 0);
-=======
-            this.input_url.Location = new System.Drawing.Point(73, 0);
->>>>>>> 4dd77404509f15b5296921772ca3c754a2e32ade
+            this.input_url.Location = new System.Drawing.Point(59, 0);
             this.input_url.Margin = new System.Windows.Forms.Padding(0);
             this.input_url.Multiline = true;
             this.input_url.Name = "input_url";
             this.input_url.RightToLeft = System.Windows.Forms.RightToLeft.No;
-<<<<<<< HEAD
-            this.input_url.Size = new System.Drawing.Size(443, 37);
-=======
-            this.input_url.Size = new System.Drawing.Size(437, 38);
->>>>>>> 4dd77404509f15b5296921772ca3c754a2e32ade
+            this.input_url.Size = new System.Drawing.Size(445, 38);
             this.input_url.TabIndex = 40;
             // 
             // btn_download
             // 
             this.btn_download.Dock = System.Windows.Forms.DockStyle.Fill;
-<<<<<<< HEAD
-            this.btn_download.Location = new System.Drawing.Point(630, 36);
+            this.btn_download.Location = new System.Drawing.Point(630, 38);
             this.btn_download.Margin = new System.Windows.Forms.Padding(0);
             this.btn_download.Name = "btn_download";
-            this.btn_download.Size = new System.Drawing.Size(170, 37);
-=======
-            this.btn_download.Location = new System.Drawing.Point(628, 38);
-            this.btn_download.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_download.Name = "btn_download";
-            this.btn_download.Size = new System.Drawing.Size(172, 38);
->>>>>>> 4dd77404509f15b5296921772ca3c754a2e32ade
+            this.btn_download.Size = new System.Drawing.Size(170, 38);
             this.btn_download.TabIndex = 42;
             this.btn_download.Text = "Download";
             this.btn_download.UseVisualStyleBackColor = true;
@@ -483,20 +458,12 @@
             // 
             this.input_dwndir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.input_dwndir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.input_dwndir.Location = new System.Drawing.Point(124, 0);
-=======
-            this.input_dwndir.Location = new System.Drawing.Point(118, 0);
->>>>>>> 4dd77404509f15b5296921772ca3c754a2e32ade
+            this.input_dwndir.Location = new System.Drawing.Point(126, 0);
             this.input_dwndir.Margin = new System.Windows.Forms.Padding(0);
             this.input_dwndir.Multiline = true;
             this.input_dwndir.Name = "input_dwndir";
             this.input_dwndir.RightToLeft = System.Windows.Forms.RightToLeft.No;
-<<<<<<< HEAD
-            this.input_dwndir.Size = new System.Drawing.Size(506, 36);
-=======
-            this.input_dwndir.Size = new System.Drawing.Size(510, 38);
->>>>>>> 4dd77404509f15b5296921772ca3c754a2e32ade
+            this.input_dwndir.Size = new System.Drawing.Size(504, 38);
             this.input_dwndir.TabIndex = 45;
             // 
             // label1
@@ -507,11 +474,7 @@
             this.label1.Location = new System.Drawing.Point(3, 12);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-<<<<<<< HEAD
-            this.label1.Size = new System.Drawing.Size(118, 13);
-=======
-            this.label1.Size = new System.Drawing.Size(112, 13);
->>>>>>> 4dd77404509f15b5296921772ca3c754a2e32ade
+            this.label1.Size = new System.Drawing.Size(120, 13);
             this.label1.TabIndex = 44;
             this.label1.Text = "Download Folder";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -524,11 +487,7 @@
             this.label3.Location = new System.Drawing.Point(3, 50);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-<<<<<<< HEAD
-            this.label3.Size = new System.Drawing.Size(118, 13);
-=======
-            this.label3.Size = new System.Drawing.Size(112, 13);
->>>>>>> 4dd77404509f15b5296921772ca3c754a2e32ade
+            this.label3.Size = new System.Drawing.Size(120, 13);
             this.label3.TabIndex = 41;
             this.label3.Text = "Youtube URL";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -541,11 +500,7 @@
             this.btn_dwndir.Margin = new System.Windows.Forms.Padding(0);
             this.btn_dwndir.Name = "btn_dwndir";
             this.btn_dwndir.RightToLeft = System.Windows.Forms.RightToLeft.No;
-<<<<<<< HEAD
-            this.btn_dwndir.Size = new System.Drawing.Size(170, 36);
-=======
-            this.btn_dwndir.Size = new System.Drawing.Size(172, 38);
->>>>>>> 4dd77404509f15b5296921772ca3c754a2e32ade
+            this.btn_dwndir.Size = new System.Drawing.Size(170, 38);
             this.btn_dwndir.TabIndex = 43;
             this.btn_dwndir.Text = "Change";
             this.btn_dwndir.UseVisualStyleBackColor = true;
@@ -620,14 +575,17 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelSlide.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
+            this.panelSlide.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
@@ -673,12 +631,12 @@
         private System.Windows.Forms.ToolStripMenuItem btn_downloadManager;
         private System.Windows.Forms.ToolStripMenuItem btn_playList;
         public System.Windows.Forms.ListBox list_videos;
-<<<<<<< HEAD
         public System.Windows.Forms.Button btn_profile;
-=======
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.ToolStripMenuItem btn_profile;
->>>>>>> 4dd77404509f15b5296921772ca3c754a2e32ade
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem profileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem playlistToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem downloaderToolStripMenuItem;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
     }
 }
 
