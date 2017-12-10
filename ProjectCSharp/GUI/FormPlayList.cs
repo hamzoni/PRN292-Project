@@ -65,7 +65,7 @@ namespace ProjectCSharp
 
         private void label1_MouseDown(object sender, MouseEventArgs e)
         {
-            lastPoint = new Point(-e.X - 210, -e.Y);
+            lastPoint = new Point(-e.X - 145, -e.Y);
         }
 
         private void label1_MouseMove(object sender, MouseEventArgs e)
@@ -154,5 +154,21 @@ namespace ProjectCSharp
 
             new FormEditPlaylist(playlist, this).Show();
         }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(-e.X, -e.Y);
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Point mousePose = Control.MousePosition;
+                mousePose.Offset(lastPoint.X, lastPoint.Y);
+                Location = mousePose;
+            }
+        }
+
     }
 }

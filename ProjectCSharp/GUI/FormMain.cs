@@ -143,9 +143,15 @@ namespace ProjectCSharp
             // Environment.Exit(0);
         }
 
+<<<<<<< HEAD
         private void btn_profile_Click(object sender, EventArgs e)
         {
             new FormProfile(ctrl).Show();
+=======
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+>>>>>>> 4dd77404509f15b5296921772ca3c754a2e32ade
         }
     }
 }

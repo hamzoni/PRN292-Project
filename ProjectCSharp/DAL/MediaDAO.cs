@@ -13,16 +13,6 @@ namespace ProjectCSharp.DAL
     {
         private string table = "Media";
 
-
-        public void deleteByAccount(int accountID)
-        {
-            List<int> ids = searchByAccount(accountID);
-            foreach (int id in ids)
-            {
-                delete(id);
-            }
-        }
-
         public int count(int playlist_id)
         {
             int c = (int) QueryBuilder.table(table)

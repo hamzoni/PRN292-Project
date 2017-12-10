@@ -61,11 +61,17 @@ namespace ProjectCSharp.DAL
 
         public void delete(object x)
         {
+
+            List<int> ids = DataModel.medMdl.searchByAccount((int)x);
+
             // delete relationship
-            // DataModel.plmedMdl.deleteByAccount((int)x);
+            DataModel.plmedMdl.deleteByAccount((int)x);
 
             // delete medias
-            DataModel.medMdl.deleteByAccount((int)x);
+            foreach (int id in ids)
+            {
+                delete(id);
+            }
 
             // delete playlist
             DataModel.plMdl.deleteByAccount((int)x);

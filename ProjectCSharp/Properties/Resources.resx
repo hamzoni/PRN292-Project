@@ -118,44 +118,68 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PlayIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\PlayIcon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="download-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\download-24.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="login-1-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\login-1-32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="101-disco-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\101-disco-32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="gmail-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\gmail-48.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pattern (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\pattern (2).png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pattern (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\pattern (1).png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="movie-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\movie-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="loginIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\loginIcon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="add-alt-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\add-alt-24.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="artist-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\artist-32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="square-facebook-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\square-facebook-32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="music-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\music-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="movie-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\movie-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="log_out-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\log_out-32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pattern (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\pattern (1).png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PlayIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\PlayIcon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="237046-folder_add_plus-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\237046-folder_add_plus-24.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loginIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\loginIcon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gmail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\gmail.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="folder_music-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\folder_music-24.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="101-disco-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\101-disco-32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menuIcon4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\menuIcon4.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ic_playlist_add_48px-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\ic_playlist_add_48px-32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="artist-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\artist-32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="156-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\156-32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="movie-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\movie-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pattern (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\pattern (1).png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="music-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\music-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pattern (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\pattern (2).png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="menuIcon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\menuIcon3.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,41 +187,20 @@
   <data name="menuIcon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\menuIcon1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="log_out-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\log_out-32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="download-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\download-24.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="menuIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\menuIcon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gmail" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\gmail.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="youtube-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\youtube-32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="menuIcon4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\menuIcon4.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="square-facebook-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\square-facebook-32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pattern (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\pattern (1).png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="folder_music-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\folder_music-24.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="156-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\156-32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="237046-folder_add_plus-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\237046-folder_add_plus-24.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="add-alt-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\add-alt-24.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="movie-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\movie-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="music-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\music-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="final-fantasy-video-game-wallpaper-16399-16917-hd-wallpapers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\final-fantasy-video-game-wallpaper-16399-16917-hd-wallpapers.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

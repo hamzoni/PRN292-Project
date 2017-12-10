@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblPlaylistName = new System.Windows.Forms.Label();
             this.list_medias = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -40,9 +39,12 @@
             this.txtPlaylistName = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dialog_openFile = new System.Windows.Forms.OpenFileDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.list_medias)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -86,25 +88,12 @@
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
             this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(347, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
-            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
-            // 
             // lblPlaylistName
             // 
             this.lblPlaylistName.AutoSize = true;
             this.lblPlaylistName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlaylistName.ForeColor = System.Drawing.Color.White;
-            this.lblPlaylistName.Location = new System.Drawing.Point(10, 56);
+            this.lblPlaylistName.Location = new System.Drawing.Point(6, 32);
             this.lblPlaylistName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPlaylistName.Name = "lblPlaylistName";
             this.lblPlaylistName.Size = new System.Drawing.Size(145, 20);
@@ -114,10 +103,10 @@
             // list_medias
             // 
             this.list_medias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.list_medias.Location = new System.Drawing.Point(10, 98);
+            this.list_medias.Location = new System.Drawing.Point(0, 80);
             this.list_medias.Margin = new System.Windows.Forms.Padding(2);
             this.list_medias.Name = "list_medias";
-            this.list_medias.Size = new System.Drawing.Size(326, 178);
+            this.list_medias.Size = new System.Drawing.Size(347, 182);
             this.list_medias.TabIndex = 3;
             this.list_medias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.list_medias.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.list_medias_CellEndEdit);
@@ -126,7 +115,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 351);
+            this.panel2.Location = new System.Drawing.Point(0, 335);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(347, 4);
@@ -137,10 +126,10 @@
             this.btnSubmit.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.Black;
-            this.btnSubmit.Location = new System.Drawing.Point(243, 289);
+            this.btnSubmit.Location = new System.Drawing.Point(227, 280);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(83, 31);
+            this.btnSubmit.Size = new System.Drawing.Size(120, 52);
             this.btnSubmit.TabIndex = 9;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
@@ -151,10 +140,10 @@
             this.btnDelete.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(128, 289);
+            this.btnDelete.Location = new System.Drawing.Point(114, 280);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(83, 31);
+            this.btnDelete.Size = new System.Drawing.Size(109, 52);
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -163,10 +152,11 @@
             // txtPlaylistName
             // 
             this.txtPlaylistName.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtPlaylistName.Location = new System.Drawing.Point(156, 49);
+            this.txtPlaylistName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlaylistName.Location = new System.Drawing.Point(155, 30);
             this.txtPlaylistName.Margin = new System.Windows.Forms.Padding(2);
             this.txtPlaylistName.Name = "txtPlaylistName";
-            this.txtPlaylistName.Size = new System.Drawing.Size(168, 24);
+            this.txtPlaylistName.Size = new System.Drawing.Size(192, 26);
             this.txtPlaylistName.TabIndex = 11;
             // 
             // btnAdd
@@ -174,10 +164,10 @@
             this.btnAdd.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.Black;
-            this.btnAdd.Location = new System.Drawing.Point(14, 289);
+            this.btnAdd.Location = new System.Drawing.Point(0, 280);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(83, 31);
+            this.btnAdd.Size = new System.Drawing.Size(110, 52);
             this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -189,12 +179,36 @@
             this.dialog_openFile.Filter = "MP3 file (*.mp3)|*.mp3|All file(*.*)|*.*";
             this.dialog_openFile.Multiselect = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(347, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = global::ProjectCSharp.Properties.Resources.final_fantasy_video_game_wallpaper_16399_16917_hd_wallpapers;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(347, 339);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            // 
             // FormNewlPlayList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.RoyalBlue;
-            this.ClientSize = new System.Drawing.Size(347, 355);
+            this.BackColor = System.Drawing.Color.SaddleBrown;
+            this.ClientSize = new System.Drawing.Size(347, 339);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtPlaylistName);
             this.Controls.Add(this.btnDelete);
@@ -203,6 +217,7 @@
             this.Controls.Add(this.list_medias);
             this.Controls.Add(this.lblPlaylistName);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -212,8 +227,9 @@
             this.Text = "FormDetailPlayList";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.list_medias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,5 +249,6 @@
         private System.Windows.Forms.TextBox txtPlaylistName;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.OpenFileDialog dialog_openFile;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

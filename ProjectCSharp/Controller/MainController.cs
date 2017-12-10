@@ -76,6 +76,11 @@ namespace ProjectCSharp.Controller
 
         public void landing()
         {
+<<<<<<< HEAD
+=======
+ 
+
+>>>>>>> 4dd77404509f15b5296921772ca3c754a2e32ade
             if (auth != null)
             {
                 if (auth.account != null)

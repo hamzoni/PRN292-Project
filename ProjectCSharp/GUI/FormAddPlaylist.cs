@@ -89,14 +89,14 @@ namespace ProjectCSharp
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            
+            dialog_openFile.FileName = "";
             if (dialog_openFile.ShowDialog() == DialogResult.OK)
             {
                 dt = new DataTable();
 
                 dt.Columns.Add("Name");
                 dt.Columns.Add("URL");
-                dt.Columns.Add("Type");
+               // dt.Columns.Add("Type");
 
                 for (int i = 0; i < dialog_openFile.FileNames.Length; i++)
                 {
@@ -146,7 +146,7 @@ namespace ProjectCSharp
                         m.name = "Untitled_" + i;
                     }
 
-                    dt.Rows.Add(new object[] { m.name, m.url, m.type });
+                    dt.Rows.Add(new object[] { m.name, m.url});
                 }
 
                 list_medias.DataSource = dt;
