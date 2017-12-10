@@ -61,28 +61,16 @@ namespace ProjectCSharp.DAL
 
         public void delete(object x)
         {
-            // get all playlist linked to this account
-            List<Playlist> playlists = DataModel.plMdl.searchByAccount((int)x);
+            // delete relationship
+            // DataModel.plmedMdl.deleteByAccount((int)x);
 
-            // get all media related to this account
-            List<Media> medias = new List<Media>();
+            // delete medias
+            DataModel.medMdl.deleteByAccount((int)x);
 
-            foreach (Playlist pl in playlists)
-            {
-                List<Media> mdl = DataModel.medMdl.searchByPlaylist(pl.id);
-                medias.AddRange(mdl);
-            }
+            // delete playlist
+            DataModel.plMdl.deleteByAccount((int)x);
 
-            // delete all playlist linked to this account
-            DataModel.plMdl.deleteByAccount((int) x);
-
-            // delete all media related to this account
-            foreach (Media media in medias)
-            {
-                DataModel.medMdl.delete(media.id);
-            }
-
-            // delete itself
+            // delete account
             QueryBuilder.table(table)
                 .delete()
                 .where("id", x)

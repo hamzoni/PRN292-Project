@@ -53,6 +53,7 @@
             this.input_username.Name = "input_username";
             this.input_username.Size = new System.Drawing.Size(152, 25);
             this.input_username.TabIndex = 0;
+            this.input_username.TextChanged += new System.EventHandler(this.input_username_TextChanged);
             // 
             // input_password
             // 

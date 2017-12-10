@@ -87,12 +87,10 @@ namespace ProjectCSharp.DAL
 
         public void deleteByAccount(int accountID)
         {
-            // delete all playlist with account id = accountID
-            List<Playlist> lists = searchByAccount(accountID);
-            foreach (Playlist pl in lists)
-            {
-                delete(pl.id);
-            }
+            QueryBuilder.table(table)
+                .delete()
+                .where("account_id", accountID)
+                .execute();
         }
 
         public bool insert(Playlist playlist)

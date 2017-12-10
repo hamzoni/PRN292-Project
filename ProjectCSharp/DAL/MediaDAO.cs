@@ -3,6 +3,7 @@ using ProjectCSharp.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 
@@ -11,6 +12,16 @@ namespace ProjectCSharp.DAL
     class MediaDAO : DAO, IDAO<Media>
     {
         private string table = "Media";
+
+
+        public void deleteByAccount(int accountID)
+        {
+            List<int> ids = searchByAccount(accountID);
+            foreach (int id in ids)
+            {
+                delete(id);
+            }
+        }
 
         public int count(int playlist_id)
         {
@@ -52,6 +63,33 @@ namespace ProjectCSharp.DAL
                 .execute();
 
             return c != 0;
+        }
+
+        public List<int> searchByAccount(int accountID)
+        {
+            List<int> list = new List<int>();
+
+            string query = " SELECT Media.id FROM Media  " +
+                " RIGHT JOIN Playlist_Media  " +
+                " ON Media.id = Playlist_Media.media_id " +
+                " RIGHT JOIN Playlist " +
+                " ON Playlist.id = Playlist_Media.playlist_id " +
+                " WHERE account_id = " + accountID;
+
+            DataSet ds = new DataSet();
+
+            SqlConnection con = new SqlConnection(cs);
+            SqlCommand cmd = new SqlCommand(query, con);
+
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            sda.Fill(ds);
+
+            foreach (DataRow r in ds.Tables[0].Rows)
+            {
+                list.Add((Int32.Parse(r["id"].ToString())));
+            }
+
+            return list;
         }
 
         public List<Media> searchByPlaylist(int playlistID)

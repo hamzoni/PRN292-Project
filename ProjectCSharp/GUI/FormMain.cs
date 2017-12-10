@@ -90,12 +90,6 @@ namespace ProjectCSharp
             btn_profile.Font = new Font(btn_profile.Font.FontFamily, 12);
         }
 
-  
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-          
-        }
-
         private void lblUsername_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             btnLogout.Visible = true;
@@ -119,9 +113,8 @@ namespace ProjectCSharp
 
         private void btnLogout_Click_1(object sender, EventArgs e)
         {
-            btn_profile.Enabled = true;
-            lblUsername.Text = "";
-            btnLogout.Visible = false;
+            new FormLogin().Show();
+            Dispose();
         }
 
         private void btn_playList_Click(object sender, EventArgs e)
@@ -148,6 +141,11 @@ namespace ProjectCSharp
         {
             ctrl.closeAllProcesses();
             // Environment.Exit(0);
+        }
+
+        private void btn_profile_Click(object sender, EventArgs e)
+        {
+            new FormProfile(ctrl).Show();
         }
     }
 }

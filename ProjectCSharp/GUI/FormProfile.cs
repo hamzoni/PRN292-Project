@@ -23,8 +23,6 @@ namespace ProjectCSharp.GUI
         public FormProfile()
         {
             InitializeComponent();
-            Control.CheckForIllegalCrossThreadCalls = false;
-            this.acc = new Account();
         }
 
         public FormProfile(MainController ctrl)
@@ -33,6 +31,9 @@ namespace ProjectCSharp.GUI
             Control.CheckForIllegalCrossThreadCalls = false;
             this.ctrl = ctrl;
             this.acc = ctrl.auth.account;
+
+            input_username.Text = acc.username;
+            input_password.Text = acc.password;
         }
 
         private void btn_editsubmit_Click(object sender, EventArgs e)
@@ -47,7 +48,7 @@ namespace ProjectCSharp.GUI
                 // save data
                 acc.username = input_username.Text;
                 acc.password = input_password.Text;
-                // DataModel.accMdl.update(acc);
+                DataModel.accMdl.update(acc);
             }
             else
             {
@@ -81,9 +82,16 @@ namespace ProjectCSharp.GUI
             bool cf = MSG.confirm("This action is irreversible. Are you sure to continue?", "Delete account");
             if (cf)
             {
+                DataModel.accMdl.delete(acc.id);
+                this.Dispose();
+                ctrl.logout();
                 return;
             }
         }
 
+        private void input_username_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

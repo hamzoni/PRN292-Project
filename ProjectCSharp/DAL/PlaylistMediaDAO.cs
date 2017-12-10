@@ -2,6 +2,7 @@
 using ProjectCSharp.Entities;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 
@@ -25,6 +26,21 @@ namespace ProjectCSharp.DAL
                 .delete()
                 .where("media_id", id)
                 .execute();
+        }
+
+        public void deleteByAccount(int id)
+        {
+            string query = "DELETE Playlist_Media FROM Playlist_Media " +
+                " RIGHT JOIN Playlist " +
+                " ON Playlist_Media.playlist_id = Playlist.id " +
+                " WHERE account_id = " + id;
+
+            SqlConnection con = new SqlConnection(cs);
+            SqlCommand cmd = new SqlCommand(query, con);
+
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
         }
 
         public void delete(object x)

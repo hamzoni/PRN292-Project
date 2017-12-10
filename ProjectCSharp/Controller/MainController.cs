@@ -76,8 +76,6 @@ namespace ProjectCSharp.Controller
 
         public void landing()
         {
-            gui.btn_profile.Enabled = false;
-
             if (auth != null)
             {
                 if (auth.account != null)
@@ -88,6 +86,12 @@ namespace ProjectCSharp.Controller
                     }
                 }
             }
+        }
+
+        public void logout()
+        {
+            new FormLogin().Show();
+            gui.Dispose();
         }
 
         public void closeAllProcesses()
