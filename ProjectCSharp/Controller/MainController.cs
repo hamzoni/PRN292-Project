@@ -76,7 +76,7 @@ namespace ProjectCSharp.Controller
 
         public void landing()
         {
-            gui.btn_profile.Enabled = false;
+ 
 
             if (auth != null)
             {

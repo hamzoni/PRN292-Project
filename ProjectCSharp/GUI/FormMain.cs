@@ -149,5 +149,10 @@ namespace ProjectCSharp
             ctrl.closeAllProcesses();
             // Environment.Exit(0);
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }
