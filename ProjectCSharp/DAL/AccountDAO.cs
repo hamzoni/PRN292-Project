@@ -70,7 +70,7 @@ namespace ProjectCSharp.DAL
             // delete medias
             foreach (int id in ids)
             {
-                delete(id);
+                DataModel.medMdl.delete(id);
             }
 
             // delete playlist

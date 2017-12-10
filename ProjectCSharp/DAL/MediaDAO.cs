@@ -27,7 +27,8 @@ namespace ProjectCSharp.DAL
         {
             QueryBuilder.table(table)
                 .delete()
-                .where("id", x);
+                .where("id", x)
+                .execute();
         }
 
         public int insertGetId(Media x)
