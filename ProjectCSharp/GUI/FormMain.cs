@@ -83,39 +83,18 @@ namespace ProjectCSharp
         //======================================================
         private void btnLogin_MouseHover(object sender, EventArgs e)
         {
-            btnLogin.Font = new Font(btnLogin.Font.FontFamily, 16);
+            btn_profile.Font = new Font(btn_profile.Font.FontFamily, 16);
         }
 
         private void btnLogin_MouseLeave(object sender, EventArgs e)
         {
-            btnLogin.Font = new Font(btnLogin.Font.FontFamily, 12);
+            btn_profile.Font = new Font(btn_profile.Font.FontFamily, 12);
         }
 
-        private void btnSong_MouseHover(object sender, EventArgs e)
-        {
-            btnSong.Font = new Font(Font.FontFamily, 16);
-        }
-
-        private void btnSong_MouseLeave(object sender, EventArgs e)
-        {
-            btnSong.Font = new Font(Font.FontFamily, 12);
-        }
-
-     
-        private void btnVideo_MouseHover(object sender, EventArgs e)
-        {
-            btnVideo.Font = new Font(Font.FontFamily, 16);
-        }
-
-        private void btnVideo_MouseLeave(object sender, EventArgs e)
-        {
-            btnVideo.Font = new Font(Font.FontFamily, 12);
-        }
   
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            FormLogin login = new FormLogin(ctrl.auth);
-            login.ShowDialog();
+          
         }
 
         private void lblUsername_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -141,9 +120,7 @@ namespace ProjectCSharp
 
         private void btnLogout_Click_1(object sender, EventArgs e)
         {
-            btnLogin.Enabled = true;
-            btnSong.Enabled = false;
-            btnVideo.Enabled = false;
+            btn_profile.Enabled = true;
             lblUsername.Text = "";
             btnLogout.Visible = false;
         }

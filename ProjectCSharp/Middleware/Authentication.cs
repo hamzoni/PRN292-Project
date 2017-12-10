@@ -10,18 +10,12 @@ namespace ProjectCSharp
 {
     class Authentication
     {
-        private MainController ctrl;
+        public MainController ctrl;
         public Account account { get; set; }
 
-        public Authentication(MainController ctrl)
+        public Authentication()
         {
-            this.ctrl = ctrl;
-            // fake login
-            //account = new Account();
-            //account.username = "A";
-            //account.password = "123";
-
-            // account = DataModel.accMdl.search(account);
+            account = new Account();
         }
 
         public void loginSuccess()

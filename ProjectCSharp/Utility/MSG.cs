@@ -21,5 +21,10 @@ namespace ProjectCSharp.Utility
             title = title == null ? "Success" : title;
             MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
+
+        public static bool confirm(string msg, string title)
+        {
+            return MessageBox.Show(msg, title, MessageBoxButtons.YesNo) == DialogResult.Yes;
+        }
     }
 }

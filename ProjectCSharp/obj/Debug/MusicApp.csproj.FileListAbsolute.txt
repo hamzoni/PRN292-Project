@@ -180,3 +180,4 @@ C:\Users\World\Desktop\PRN292-Projects\ProjectCSharp\bin\Debug\nunit.framework.x
 C:\Users\World\Desktop\PRN292-Projects\ProjectCSharp\bin\Debug\policy.2.0.taglib-sharp.config
 C:\Users\World\Desktop\PRN292-Projects\ProjectCSharp\bin\Debug\Interop.WMPLib.dll
 C:\Users\World\Desktop\PRN292-Projects\ProjectCSharp\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\World\Desktop\PRN292-Projects\ProjectCSharp\obj\Debug\ProjectCSharp.GUI.FormProfile.resources

@@ -77,9 +77,7 @@ namespace ProjectCSharp.Controller
 
         public void landing()
         {
-            gui.btnLogin.Enabled = false;
-            gui.btnSong.Enabled = true;
-            gui.btnVideo.Enabled = true;
+            gui.btn_profile.Enabled = false;
 
             if (auth != null)
             {

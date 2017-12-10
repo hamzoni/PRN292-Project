@@ -22,13 +22,7 @@ namespace ProjectCSharp
         {
             InitializeComponent();
             txtPassword.PasswordChar = '*';
-        }
-
-        public FormLogin(Authentication auth)
-        {
-            InitializeComponent();
-            txtPassword.PasswordChar = '*';
-            this.auth = auth;
+            auth = new Authentication();
         }
 
         public void autofill(Account acc)
@@ -47,6 +41,9 @@ namespace ProjectCSharp
             {
                 auth.account = acc;
                 auth.loginSuccess();
+
+                new FormMain().ShowDialog();
+
                 this.Hide();
             }
         }
@@ -57,14 +54,5 @@ namespace ProjectCSharp
             register.ShowDialog();
         }
 
-        private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
