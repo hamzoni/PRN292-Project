@@ -5,7 +5,7 @@
 - Subject: 	.NET and C#(PRN292) 
 - Students/Authors: Tạ Quý, Trần Đức Toàn
 - Instructor: Ms. Lê Phương Chi
-
+![alt text](https://i.imgur.com/kdY1zlx.png)
 
 Development environments
 - OS: window 8, 10
