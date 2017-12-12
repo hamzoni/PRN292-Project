@@ -1,4 +1,4 @@
-# PRN292-Projects
+# PRN292-Project
 
 - Project name:  MusicApp Quy Toan PRN292 Project
 - Purpose: Final C#.NET Project 
