@@ -32,6 +32,6 @@ Core features:
 - QueryBuilder library for access database model
 
 Additional credits:
-- Nguyễn Văn Viên: for 3rd party software introduction and earlier technical support.
+- Nguyễn Văn Viên: for introducing 3rd party software and earlier technical support.
 
 Copyright: the source codes has no copyright and is free for development, personal use and commercial use.
