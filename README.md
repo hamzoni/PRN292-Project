@@ -3,7 +3,7 @@
 - Project name:  MusicApp Quy Toan PRN292 Project
 - Purpose: Final C#.NET Project 
 - Subject: 	.NET and C#(PRN292) 
-- Instructor: Lê Phương Chi
+- Instructor: Ms. Lê Phương Chi
 - Contributors: Tạ Quý, Trần Đức Toàn
 
 Development environments
