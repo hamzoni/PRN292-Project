@@ -4,7 +4,7 @@
 - Purpose: Final C#.NET Project 
 - Subject: 	.NET and C#(PRN292) 
 - Instructor: Ms. Lê Phương Chi
-- Contributors: Tạ Quý, Trần Đức Toàn
+- Students: Tạ Quý, Trần Đức Toàn
 
 Development environments
 - OS: window 8, 10
